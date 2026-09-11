@@ -45,8 +45,10 @@
     .vision h2 { margin:0 0 14px; font-size:38px; letter-spacing:-1.5px; }
     .vision p { max-width:700px; margin:0; color:#e5ecff; line-height:1.8; }
     footer { margin-top:40px; border-top:1px solid var(--line); padding:32px 0 50px; color:#7b8392; font-size:13px; }
-    .footer-row { display:flex; justify-content:space-between; gap:20px; }
-    @media(max-width:800px){ .nav-links{display:none;} .hero{padding-top:72px;} h1{letter-spacing:-3px;} .grid{grid-template-columns:1fr;} .vision{padding:34px 26px;} .footer-row{flex-direction:column;} }
+    .footer-row { display:flex; justify-content:space-between; gap:20px; align-items:center; }
+    .footer-links { display:flex; gap:14px; flex-wrap:wrap; }
+    .footer-links a:hover { color:var(--blue); }
+    @media(max-width:800px){ .nav-links{display:none;} .hero{padding-top:72px;} h1{letter-spacing:-3px;} .grid{grid-template-columns:1fr;} .vision{padding:34px 26px;} .footer-row{flex-direction:column;align-items:flex-start;} }
   </style>
 </head>
 <body>
@@ -70,6 +72,6 @@
     </section>
     <section id="about"><div class="vision"><h2>서비스는 계속됩니다.</h2><p>TCFLICK은 사람들이 필요로 하는 서비스를 직접 만들고 제공합니다. 하나의 서비스에 머무르지 않고, 새로운 아이디어를 실제 서비스로 만들어 더 많은 선택지를 제공하는 브랜드가 되겠습니다.</p></div></section>
   </div></main>
-  <footer id="contact"><div class="wrap"><div class="footer-row"><span>© 2026 TCFLICK. All rights reserved.</span><span>서비스 · 브랜드 소개 · 문의 · 개인정보처리방침 · 이용약관</span></div></div></footer>
+  <footer id="contact"><div class="wrap"><div class="footer-row"><span>© 2026 TCFLICK. All rights reserved.</span><div class="footer-links"><a href="/affiliate.html">제휴·광고 고지</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a></div></div></div></footer>
 </body>
 </html>
