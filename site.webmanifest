@@ -1,0 +1,10 @@
+{
+  "name": "TCFLICK",
+  "short_name": "TCFLICK",
+  "description": "필요한 서비스를 직접 만들고 제공하는 디지털 서비스 브랜드 TCFLICK.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "lang": "ko"
+}
