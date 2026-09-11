@@ -16,7 +16,8 @@
     header { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:rgba(247,249,252,.86); border-bottom:1px solid var(--line); }
     nav { height:72px; display:flex; align-items:center; justify-content:space-between; }
     .logo { font-size:22px; font-weight:900; letter-spacing:-1px; }
-    .logo span { color:var(--blue); }
+    /* 요청한 대로 TC는 검정, FLiCK 전체를 파란색으로 표시 */
+    .logo .flick { color:var(--blue); }
     .nav-links { display:flex; gap:26px; font-size:14px; font-weight:700; color:#596174; }
     .nav-links a:hover { color:var(--blue); }
     .hero { padding:110px 0 90px; }
@@ -49,7 +50,7 @@
   </style>
 </head>
 <body>
-  <header><div class="wrap"><nav><a class="logo" href="#top">TCF<span>LiCK</span></a><div class="nav-links"><a href="#services">서비스</a><a href="#about">TCFLICK</a><a href="#contact">문의</a></div></nav></div></header>
+  <header><div class="wrap"><nav><a class="logo" href="#top">TC<span class="flick">FLiCK</span></a><div class="nav-links"><a href="#services">서비스</a><a href="#about">TCFLICK</a><a href="#contact">문의</a></div></nav></div></header>
   <main id="top"><div class="wrap">
     <section class="hero">
       <span class="eyebrow">TCFLICK · Digital Services</span>
