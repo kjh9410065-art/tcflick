@@ -4,9 +4,15 @@
     <loc>https://tcflick.com/</loc>
   </url>
   <url>
+    <loc>https://tcflick.com/services.html</loc>
+  </url>
+  <url>
     <loc>https://tcflick.com/privacy.html</loc>
   </url>
   <url>
     <loc>https://tcflick.com/terms.html</loc>
+  </url>
+  <url>
+    <loc>https://tcflick.com/affiliate.html</loc>
   </url>
 </urlset>
