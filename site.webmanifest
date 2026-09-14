@@ -1,7 +1,7 @@
 {
-  "name": "TCFLICK",
-  "short_name": "TCFLICK",
-  "description": "필요한 서비스를 직접 만들고 제공하는 디지털 서비스 브랜드 TCFLICK.",
+  "name": "TCFLiCK",
+  "short_name": "TCFLiCK",
+  "description": "필요한 서비스를 직접 만들고 제공하는 디지털 서비스 브랜드 TCFLiCK.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8fafc",
