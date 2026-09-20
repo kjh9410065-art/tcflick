@@ -23,6 +23,8 @@ header{position:sticky;top:0;z-index:10;background:var(--header);backdrop-filter
 .ad-slot{height:90px;max-width:970px;margin:0 auto 34px;visibility:hidden}.toolbar{display:flex;align-items:center;justify-content:space-between;margin:25px 0 15px}.count{font-size:13px;font-weight:800;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{position:relative;min-height:270px;padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--white);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:.22s}.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#93b4f8;box-shadow:0 18px 42px rgba(15,23,42,.08)}.card:hover:before{transform:scaleX(1)}.service-image{width:64px;height:64px;display:block;object-fit:contain;border-radius:16px;background:var(--soft);padding:6px}.icon{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:var(--soft);font-size:22px}.card h2{margin:17px 0 7px;font-size:21px;letter-spacing:-.7px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}.badge{position:absolute;right:20px;top:20px;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:900}.live{background:#dcfce7;color:#166534}.building{background:#dbeafe;color:#1d4ed8}.action{display:inline-flex;margin-top:22px;color:var(--blue);font-size:12px;font-weight:900}.disabled{cursor:default}.disabled:hover{transform:none;border-color:var(--line);box-shadow:none}.disabled:hover:before{transform:scaleX(0)}.disabled .action{color:var(--muted)}.note{margin:18px 0 34px;padding:22px 24px;border:1px solid var(--line);border-radius:20px;background:var(--white);color:var(--muted);font-size:13px}.note strong{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:12px}.footer{display:flex;justify-content:space-between;gap:18px}.links{display:flex;gap:16px;flex-wrap:wrap}.links a:hover{color:var(--blue)}
 @media(max-width:650px){.wrap{width:min(100% - 24px,1120px)}.hero{padding:65px 0 35px}h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.card{min-height:235px}.service-image{width:58px;height:58px}.footer{flex-direction:column}.ad-slot{height:70px;margin-bottom:24px}}
+
+.service-details,.service-principles{padding:40px 0 70px}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.detail-grid article{padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.detail-grid h3{margin:0 0 16px;font-size:21px}.detail-grid p{margin:0 0 13px;color:var(--muted);font-size:14px;line-height:1.8}.detail-grid strong{color:var(--ink)}.detail-grid a{display:inline-block;margin-top:5px;color:var(--blue);font-size:13px;font-weight:900}.principle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.principle-grid article{padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--white)}.principle-grid strong{display:block;margin-bottom:8px;font-size:14px}.principle-grid span{color:var(--muted);font-size:12px;line-height:1.7}@media(max-width:800px){.detail-grid{grid-template-columns:1fr}.principle-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.principle-grid{grid-template-columns:1fr}}
 </style>
 <script>
 (function(){const saved=localStorage.getItem('tcflick-theme');const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.classList.add('dark');})();
@@ -41,6 +43,25 @@ footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);f
 <a class="card" href="https://movoka.tcflick.com/"><span class="badge live">LIVE</span><div><div class="icon">🎭</div><h2>MOVOKA · 모보카</h2><p>연극, 뮤지컬, 클래식, 콘서트 등 다양한 공연정보를 한곳에서 찾고 공식 예매 사이트까지 확인할 수 있는 공연정보 서비스입니다.</p></div><span class="action">서비스 이용하기 →</span></a>
 </section>
 <div class="ad-slot" aria-hidden="true"></div>
+
+<section class="service-details" aria-labelledby="detail-title">
+<div class="section-head"><div><div class="section-kicker">WHAT EACH SERVICE DOES</div><h2 id="detail-title">서비스별 이용 목적</h2><p>각 서비스가 어떤 상황에서 필요한지와 실제 이용 흐름을 정리했습니다.</p></div></div>
+<div class="detail-grid">
+<article><h3>MINGKA · 밍카</h3><p><strong>무엇을 해결하나요?</strong><br>자동차 구매, 장기렌트, 리스 중 어떤 이용 방법을 검토할지 조건을 정리하고 비교를 시작할 수 있도록 돕습니다.</p><p><strong>어떻게 이용하나요?</strong><br>간단한 질문에 답하면 입력 조건에 맞는 이용 방식과 상담 경로를 확인할 수 있습니다.</p><a href="https://mingka.tcflick.com/">서비스 이용하기 →</a></article>
+<article><h3>NOVIQ · 노빅</h3><p><strong>무엇을 해결하나요?</strong><br>생활 속에서 자주 필요한 계산을 웹에서 바로 확인할 수 있도록 계산기를 목적별로 모았습니다.</p><p><strong>어떻게 이용하나요?</strong><br>카테고리에서 계산기를 찾고 필요한 값을 입력하면 해당 계산 결과를 확인합니다.</p><a href="https://noviq.tcflick.com/">서비스 이용하기 →</a></article>
+<article><h3>NERDING · 너딩</h3><p><strong>무엇을 해결하나요?</strong><br>AI·개발 서비스를 목적과 기능을 기준으로 탐색할 수 있도록 정보를 정리합니다.</p><p><strong>어떻게 이용하나요?</strong><br>카테고리와 검색·비교 기능으로 필요한 서비스 정보를 확인하고 공식 사이트로 이동합니다.</p><a href="https://mova.tcflick.com/">서비스 이용하기 →</a></article>
+<article><h3>MOVOKA · 모보카</h3><p><strong>무엇을 해결하나요?</strong><br>공연 일정, 장소, 예매 경로 등을 한곳에서 확인할 수 있도록 공연 정보를 정리합니다.</p><p><strong>어떻게 이용하나요?</strong><br>공연 목록에서 원하는 공연을 찾은 뒤 상세 정보를 확인하고 공식 예매 경로를 이용합니다.</p><a href="https://movoka.tcflick.com/">서비스 이용하기 →</a></article>
+</div>
+</section>
+<section class="service-principles" aria-labelledby="principles-title">
+<div class="section-head"><div><div class="section-kicker">OUR PRINCIPLES</div><h2 id="principles-title">서비스를 운영하는 기준</h2></div></div>
+<div class="principle-grid">
+<article><strong>정보의 목적을 분명하게</strong><span>사용자가 왜 이 정보를 보는지 먼저 이해할 수 있도록 서비스 목적과 이용 방법을 설명합니다.</span></article>
+<article><strong>핵심 기능을 직접 제공</strong><span>단순한 링크 목록보다 검색, 계산, 진단, 비교처럼 서비스마다 필요한 기능을 중심으로 구성합니다.</span></article>
+<article><strong>공식 경로를 구분해서 안내</strong><span>외부 공식 사이트로 이동해야 하는 경우 자체 정보와 외부 경로를 구분합니다.</span></article>
+<article><strong>계속 수정하고 보완</strong><span>서비스 공개 이후에도 정보 구조와 화면, 설명, 이용 흐름을 점검합니다.</span></article>
+</div>
+</section>
 <div class="note"><strong>서비스는 계속 추가됩니다.</strong><br>TCFLiCK은 사람들이 실제로 필요로 하는 서비스를 찾고, 만들고, 운영하는 것을 목표로 합니다. 새로운 서비스가 준비되면 이 페이지에 순차적으로 추가됩니다.</div>
 </main>
 <footer><div class="wrap footer"><div>© 2026 TCFLiCK. All rights reserved.</div><div class="links"><a href="/affiliate.html">제휴 및 광고 고지</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a></div></div></footer>
