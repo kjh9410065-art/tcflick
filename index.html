@@ -41,8 +41,7 @@ section{padding:82px 0}.section-head{display:flex;align-items:end;justify-conten
 footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--blue)}
 @media(max-width:850px){.nav-links{display:none}.nav-right{gap:0}.hero{padding:85px 0 75px}.hero:before{right:-300px}.grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr}.section-head{display:block}.service-link{display:inline-block;margin-top:10px}.vision{padding:45px 28px}.vision:before{font-size:70px;right:20px}}
 @media(max-width:600px){.wrap{width:min(100% - 24px,1180px)}h1{letter-spacing:-4px;font-size:clamp(46px,15vw,68px)}.hero-copy{font-size:16px}.grid{grid-template-columns:1fr}.card{min-height:235px}.service-image{width:58px;height:58px}.vision h2{font-size:31px}.vision:before{font-size:48px;top:25px}.footer-row{align-items:flex-start;flex-direction:column}}
-</style>
-<script>
+.service-guide,.service-map,.faq-section{padding:82px 0}.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.guide-card,.map-grid article,.faq-list details{padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.guide-num{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:10px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900}.guide-card h3{margin:17px 0 8px;font-size:19px}.guide-card p,.map-grid p,.faq-list p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.map-grid h3{margin:0 0 12px;font-size:19px}.map-grid strong{color:var(--ink)}.map-grid a{display:inline-block;margin-top:18px;color:var(--blue);font-size:13px;font-weight:900}.faq-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.faq-list details{padding:0;overflow:hidden}.faq-list summary{padding:20px 22px;font-size:15px;font-weight:900;cursor:pointer;list-style:none}.faq-list summary::-webkit-details-marker{display:none}.faq-list p{padding:0 22px 22px}.faq-list details[open]{border-color:#93b4f8}@media(max-width:650px){.service-guide,.service-map,.faq-section{padding:58px 0}.guide-grid,.map-grid,.faq-list{grid-template-columns:1fr}}\n</style>\n<script>
 (function(){const saved=localStorage.getItem('tcflick-theme');const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.classList.add('dark');})();
 </script>
 <script type="application/ld+json">
@@ -60,6 +59,33 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 <a class="card card-live" href="https://movoka.tcflick.com/"><span class="live-badge">LIVE</span><div><img class="service-image" src="https://raw.githubusercontent.com/kjh9410065-art/movoka/main/%EB%AA%A8%EB%B3%B4%EC%B9%B4%20%ED%8C%8C%EB%B9%84%EC%BD%98.png" alt="MOVOKA 모보카"/><h3>MOVOKA · 모보카</h3><p>연극, 뮤지컬, 클래식, 콘서트 등 다양한 공연정보를 한곳에서 찾고 공식 예매 사이트까지 확인할 수 있는 공연정보 서비스입니다.</p></div><span class="status">서비스 이용하기</span></a>
 <a class="card disabled" href="javascript:void(0)" aria-label="문서담 준비중"><span class="soon-badge">준비중</span><div><img class="service-image" src="https://raw.githubusercontent.com/kjh9410065-art/MUNSUDAM/main/favicon.svg" alt="문서담 준비중"/><h3>MUNSUDAM · 문서담</h3><p>생활과 업무에 필요한 문서 양식을 쉽고 빠르게 찾고 활용할 수 있는 문서 서비스입니다.</p></div><span class="status">서비스 준비중</span></a>
 </div></section>
+<section id="guide" class="service-guide" aria-labelledby="guide-title">
+<div class="section-head"><div><div class="section-kicker">HOW TCFLiCK WORKS</div><h2 id="guide-title">서비스를 이렇게 만듭니다</h2><p>TCFLiCK은 단순히 외부 서비스를 모아 보여주는 사이트가 아니라, 각 목적에 맞는 서비스를 직접 기획하고 운영합니다.</p></div></div>
+<div class="guide-grid">
+<article class="guide-card"><span class="guide-num">01</span><h3>문제를 먼저 정합니다</h3><p>사용자가 어디에서 불편을 겪는지 정하고, 한 번의 방문으로 실제 문제를 해결할 수 있는 기능을 중심으로 서비스를 설계합니다.</p></article>
+<article class="guide-card"><span class="guide-num">02</span><h3>목적에 맞게 서비스를 나눕니다</h3><p>차량 이용 비교, 계산, AI 서비스 탐색, 공연정보처럼 서로 다른 목적은 각각 독립된 서비스로 운영합니다.</p></article>
+<article class="guide-card"><span class="guide-num">03</span><h3>실제로 사용할 수 있게 만듭니다</h3><p>정보만 나열하는 데 그치지 않고 검색, 계산, 비교, 진단 등 각 서비스의 핵심 기능을 직접 사용할 수 있도록 구성합니다.</p></article>
+<article class="guide-card"><span class="guide-num">04</span><h3>사용하면서 계속 개선합니다</h3><p>서비스를 공개한 뒤에도 화면, 기능, 설명, 이용 흐름을 계속 점검하고 필요한 내용을 추가합니다.</p></article>
+</div>
+</section>
+<section id="service-map" class="service-map" aria-labelledby="map-title">
+<div class="section-head"><div><div class="section-kicker">SERVICE MAP</div><h2 id="map-title">각 서비스가 해결하는 문제</h2><p>TCFLiCK 안의 서비스는 서로 다른 목적을 가지고 있습니다.</p></div></div>
+<div class="map-grid">
+<article><h3>MINGKA · 밍카</h3><p><strong>자동차 이용 방법을 비교하고 싶을 때</strong><br>몇 가지 조건을 입력해 장기렌트와 리스 등 차량 이용 방식을 살펴보고 상담 경로를 확인합니다.</p><a href="https://mingka.tcflick.com/">밍카 이용하기 →</a></article>
+<article><h3>NOVIQ · 노빅</h3><p><strong>계산 결과를 빠르게 확인하고 싶을 때</strong><br>급여, 날짜, 이자 등 생활에 필요한 계산기를 목적별로 찾아 바로 사용할 수 있습니다.</p><a href="https://noviq.tcflick.com/">노빅 이용하기 →</a></article>
+<article><h3>NERDING · 너딩</h3><p><strong>어떤 AI·개발 서비스를 써야 할지 찾을 때</strong><br>목적과 분야를 기준으로 서비스를 탐색하고 필요한 정보를 비교할 수 있습니다.</p><a href="https://mova.tcflick.com/">너딩 이용하기 →</a></article>
+<article><h3>MOVOKA · 모보카</h3><p><strong>공연을 찾고 예매 정보를 확인하고 싶을 때</strong><br>공연 종류와 지역 등을 기준으로 정보를 찾고 공식 예매 경로를 확인할 수 있습니다.</p><a href="https://movoka.tcflick.com/">모보카 이용하기 →</a></article>
+</div>
+</section>
+<section class="faq-section" aria-labelledby="faq-title">
+<div class="section-head"><div><div class="section-kicker">FAQ</div><h2 id="faq-title">TCFLiCK 자주 묻는 질문</h2></div></div>
+<div class="faq-list">
+<details><summary>TCFLiCK은 어떤 사이트인가요?</summary><p>TCFLiCK은 일상과 디지털 환경에서 필요한 문제를 발견하고, 목적에 맞는 서비스를 직접 만들어 운영하는 서비스 브랜드입니다. 각 서비스는 서로 다른 문제를 해결하도록 독립적으로 구성되어 있습니다.</p></details>
+<details><summary>TCFLiCK과 개별 서비스의 관계는 무엇인가요?</summary><p>TCFLiCK은 메인 브랜드이자 서비스 허브이고, MINGKA·NOVIQ·NERDING·MOVOKA는 각각 자동차 이용 비교, 계산, AI 서비스 탐색, 공연정보라는 독립된 목적을 가진 서비스입니다.</p></details>
+<details><summary>외부 사이트를 단순히 모아놓은 서비스인가요?</summary><p>아닙니다. 각 서비스의 핵심 기능과 이용 흐름을 직접 구성하고 운영합니다. 외부 정보나 공식 사이트로 연결되는 경우에도 사용자가 필요한 정보를 먼저 이해하고 이동할 수 있도록 서비스 안에서 목적과 이용 방법을 설명합니다.</p></details>
+<details><summary>서비스 이용에 회원가입이 필요한가요?</summary><p>서비스마다 이용 방식이 다릅니다. 현재 공개된 서비스는 가능한 경우 별도의 회원가입 없이 핵심 기능을 먼저 이용할 수 있도록 구성하고 있습니다.</p></details>
+</div>
+</section>
 <section id="about" class="brand-section"><div class="vision"><h2>필요한 서비스를 만듭니다.</h2><p>TCFLiCK은 일상에서 필요한 서비스부터 비즈니스에 필요한 도구까지, 사람들이 실제로 필요로 하는 서비스를 직접 만들고 하나씩 새로운 서비스를 선보입니다.</p></div><div class="mini-grid"><div class="mini"><strong>Simple</strong><span>복잡한 과정을 줄이고 쉽게 사용할 수 있도록 만듭니다.</span></div><div class="mini"><strong>Useful</strong><span>실제로 필요한 기능과 서비스를 만드는 것을 우선합니다.</span></div><div class="mini"><strong>Continue</strong><span>하나의 서비스에 머무르지 않고 계속 새로운 서비스를 만듭니다.</span></div></div></section>
 </div></main>
 <footer><div class="wrap"><div class="footer-row"><div>© 2026 TCFLiCK. All rights reserved.</div><div class="footer-links"><a href="/services.html">서비스</a><a href="/contact.html">문의하기</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/affiliate.html">제휴·광고 안내</a></div></div></div></footer>
