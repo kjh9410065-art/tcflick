@@ -28,13 +28,21 @@ main{padding:70px 0}.eyebrow{display:inline-flex;padding:7px 12px;border:1px sol
 <span class="eyebrow">NOTICE</span>
 <h1>공지사항</h1>
 <p class="lead">TCFLiCK의 서비스 업데이트와 주요 소식을 안내합니다.</p>
-<div class="categories" role="tablist" aria-label="공지사항 카테고리"><button class="category active" data-category="all">전체</button><button class="category" data-category="TCFLiCK">TCFLiCK</button><button class="category" data-category="MINGKA">MINGKA</button><button class="category" data-category="NOVIQ">NOVIQ</button><button class="category" data-category="NERDING">NERDING</button><button class="category" data-category="MOVOKA">MOVOKA</button></div><div class="notice-list">
-<details class="notice">
-<summary>TCFLiCK 서비스 안내 페이지를 업데이트했습니다.</summary>
+<div class="categories" role="tablist" aria-label="공지사항 카테고리">
+<button class="category active" data-category="all">전체</button>
+<button class="category" data-category="TCFLiCK">TCFLiCK</button>
+<button class="category" data-category="MINGKA">MINGKA</button>
+<button class="category" data-category="NOVIQ">NOVIQ</button>
+<button class="category" data-category="NERDING">NERDING</button>
+<button class="category" data-category="MOVOKA">MOVOKA</button>
+</div>
+<div class="notice-list">
+<details class="notice" data-category="TCFLiCK">
+<summary><span><span class="notice-category">TCFLiCK</span>TCFLiCK 서비스 안내 페이지를 업데이트했습니다.</span></summary>
 <div class="notice-body"><span class="date">2026.09.21</span><p>TCFLiCK에서 운영 중인 서비스를 한곳에서 확인할 수 있도록 서비스 포트폴리오와 서비스별 이용 목적을 정리했습니다. 앞으로 새로운 서비스가 추가되거나 주요 서비스 내용이 변경되는 경우 이곳에서 안내하겠습니다.</p></div>
 </details>
-<details class="notice">
-<summary>TCFLiCK 서비스 포트폴리오를 정비했습니다.</summary>
+<details class="notice" data-category="TCFLiCK">
+<summary><span><span class="notice-category">TCFLiCK</span>TCFLiCK 서비스 포트폴리오를 정비했습니다.</span></summary>
 <div class="notice-body"><span class="date">2026.09.21</span><p>MINGKA, NOVIQ, NERDING, MOVOKA 등 현재 운영 중인 서비스를 보다 쉽게 확인할 수 있도록 서비스 소개와 이용 경로를 정리했습니다. 준비 중인 서비스는 별도로 표시하고 있습니다.</p></div>
 </details>
 </div>
@@ -42,7 +50,24 @@ main{padding:70px 0}.eyebrow{display:inline-flex;padding:7px 12px;border:1px sol
 </div></main>
 <footer><div class="wrap">© 2026 TCFLiCK. All rights reserved.</div></footer>
 <script>
-const btn=document.getElementById('themeToggle');function syncTheme(){btn.textContent=document.documentElement.classList.contains('dark')?'☀':'☾'}syncTheme();btn.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',dark?'dark':'light');syncTheme()});
+const btn=document.getElementById('themeToggle');
+function syncTheme(){btn.textContent=document.documentElement.classList.contains('dark')?'☀':'☾'}
+syncTheme();
+btn.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',dark?'dark':'light');syncTheme()});
+
+// 서비스별 버튼을 누르면 해당 카테고리 공지만 표시합니다.
+const categoryButtons=document.querySelectorAll('.category');
+const notices=document.querySelectorAll('.notice');
+categoryButtons.forEach(button=>{
+  button.addEventListener('click',()=>{
+    const selected=button.dataset.category;
+    categoryButtons.forEach(item=>item.classList.toggle('active',item===button));
+    notices.forEach(notice=>{
+      notice.hidden=selected!=='all'&&notice.dataset.category!==selected;
+      if(notice.hidden) notice.removeAttribute('open');
+    });
+  });
+});
 </script>
 </body>
 </html>
