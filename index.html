@@ -41,7 +41,29 @@ section{padding:82px 0}.section-head{display:flex;align-items:end;justify-conten
 footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--blue)}
 @media(max-width:850px){.nav-links{display:none}.nav-right{gap:0}.hero{padding:85px 0 75px}.hero:before{right:-300px}.grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr}.section-head{display:block}.service-link{display:inline-block;margin-top:10px}.vision{padding:45px 28px}.vision:before{font-size:70px;right:20px}}
 @media(max-width:600px){.wrap{width:min(100% - 24px,1180px)}h1{letter-spacing:-4px;font-size:clamp(46px,15vw,68px)}.hero-copy{font-size:16px}.grid{grid-template-columns:1fr}.card{min-height:235px}.service-image{width:58px;height:58px}.vision h2{font-size:31px}.vision:before{font-size:48px;top:25px}.footer-row{align-items:flex-start;flex-direction:column}}
-.service-guide,.service-map,.faq-section{padding:82px 0}.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.guide-card,.map-grid article,.faq-list details{padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.guide-num{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:10px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900}.guide-card h3{margin:17px 0 8px;font-size:19px}.guide-card p,.map-grid p,.faq-list p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.map-grid h3{margin:0 0 12px;font-size:19px}.map-grid strong{color:var(--ink)}.map-grid a{display:inline-block;margin-top:18px;color:var(--blue);font-size:13px;font-weight:900}.faq-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.faq-list details{padding:0;overflow:hidden}.faq-list summary{padding:20px 22px;font-size:15px;font-weight:900;cursor:pointer;list-style:none}.faq-list summary::-webkit-details-marker{display:none}.faq-list p{padding:0 22px 22px}.faq-list details[open]{border-color:#93b4f8}@media(max-width:650px){.service-guide,.service-map,.faq-section{padding:58px 0}.guide-grid,.map-grid,.faq-list{grid-template-columns:1fr}}\n</style>\n<script>
+.service-guide,.service-map,.faq-section{padding:82px 0}.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.guide-card,.map-grid article,.faq-list details{padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.guide-num{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:10px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900}.guide-card h3{margin:17px 0 8px;font-size:19px}.guide-card p,.map-grid p,.faq-list p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.map-grid h3{margin:0 0 12px;font-size:19px}.map-grid strong{color:var(--ink)}.map-grid a{display:inline-block;margin-top:18px;color:var(--blue);font-size:13px;font-weight:900}.faq-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.faq-list details{padding:0;overflow:hidden}.faq-list summary{padding:20px 22px;font-size:15px;font-weight:900;cursor:pointer;list-style:none}.faq-list summary::-webkit-details-marker{display:none}.faq-list p{padding:0 22px 22px}.faq-list details[open]{border-color:#93b4f8}@media(max-width:650px){.service-guide,.service-map,.faq-section{padding:58px 0}.guide-grid,.map-grid,.faq-list{grid-template-columns:1fr}}\n<style id="site-navigation-style">
+.site-header{position:sticky;top:0;z-index:100;background:var(--header,rgba(248,250,252,.88));backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.site-wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+.site-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.site-logo{font-size:23px;font-weight:950;letter-spacing:-1.2px;white-space:nowrap}.site-logo span{color:var(--blue,#2563eb)}
+.site-nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:800;color:var(--muted)}
+.site-nav-links a{position:relative;padding:24px 0}
+.site-nav-links a:hover,.site-nav-links a.active{color:var(--blue,#2563eb)}
+.site-nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:16px;height:2px;border-radius:2px;background:var(--blue,#2563eb)}
+.site-nav-actions{display:flex;align-items:center;gap:8px}
+.site-theme-toggle,.site-menu-toggle{width:40px;height:40px;border:1px solid var(--line);border-radius:12px;background:var(--white);color:var(--ink);cursor:pointer;font-size:17px}
+.site-menu-toggle{display:none;font-size:20px}
+.site-footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;color:var(--muted);font-size:12px}
+.site-footer-row{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.site-footer-links{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.site-footer-links a:hover{color:var(--blue,#2563eb)}
+@media(max-width:850px){
+  .site-nav-links{display:none;position:absolute;left:12px;right:12px;top:70px;padding:10px;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px rgba(15,23,42,.12);flex-direction:column;gap:0}
+  .site-nav-links.open{display:flex}.site-nav-links a{width:100%;padding:13px 15px;border-radius:10px}.site-nav-links a.active{background:var(--soft,#eff6ff)}.site-nav-links a.active:after{display:none}
+  .site-menu-toggle{display:block}.site-nav{position:relative}.site-footer-row{flex-direction:column}.site-footer-links{justify-content:flex-start}
+}
+</style>
+</style>\n<script>
 (function(){const saved=localStorage.getItem('tcflick-theme');const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.classList.add('dark');})();
 </script>
 <script type="application/ld+json">
@@ -49,11 +71,24 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 </script>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="logo" href="#top" aria-label="TCFLiCK 티씨플릭 홈">TC<span class="flick">FLiCK</span> <span class="korean-brand">· 티씨플릭</span></a><div class="nav-right"><div class="nav-links"><a href="#services">서비스</a><a href="#service-map">서비스 안내</a><a href="#guide">이용 방식</a><a href="#about">TCFLiCK</a><a href="/services.html">전체 서비스</a><a href="/guide.html">서비스 가이드</a><a href="/insights.html">활용 정보</a><a href="/notice.html">공지사항</a><a href="/contact.html">문의하기</a></div><button class="theme-btn" id="themeToggle" aria-label="다크모드 전환" title="다크모드 전환">☾</button></div></nav></div></header>
+<header class="site-header"><div class="site-wrap"><nav class="site-nav" aria-label="주요 메뉴">
+<a class="site-logo" href="/" aria-label="TCFLiCK 홈">TC<span>FLiCK</span></a>
+<div class="site-nav-links" id="siteNavLinks">
+<a data-page="home" href="/">홈</a>
+<a data-page="services" href="/services.html">서비스</a>
+<a data-page="guide" href="/guide.html">이용 안내</a>
+<a data-page="insights" href="/insights.html">인사이트</a>
+<a data-page="notice" href="/notice.html">공지사항</a>
+<a data-page="contact" href="/contact.html">문의</a>
+</div>
+<div class="site-nav-actions">
+<button class="site-menu-toggle" id="siteMenuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+<button class="site-theme-toggle" id="themeToggle" type="button" aria-label="다크모드 전환">☾</button>
+</div>
+</nav></div></header>
 <main id="top"><div class="wrap">
 <section class="hero"><span class="eyebrow"><span class="dot"></span> Digital Services by TCFLiCK</span><h1>필요한 서비스를<br><em>만듭니다.</em></h1><p class="hero-copy">일상에서 필요한 도구부터 새로운 아이디어를 현실로 만드는 서비스까지.<br>TCFLiCK은 사람들이 필요로 하는 서비스를 하나씩 만들고 제공합니다.</p><div class="hero-actions"><a class="btn btn-primary" href="#services">서비스 살펴보기 ↓</a><a class="btn btn-light" href="#about">TCFLiCK 알아보기</a></div></section>
-<div style="margin:-18px 0 35px"><a class="btn btn-light" href="/guide.html">서비스 선택 가이드 보기 →</a></div>
-<div style="margin:-18px 0 35px"><a class="btn btn-light" href="/insights.html">서비스 활용 정보 보기 →</a></div>
+<div class="hero-actions"><a class="btn btn-light" href="/guide.html">이용 안내 보기 →</a><a class="btn btn-light" href="/insights.html">인사이트 보기 →</a></div>
 <section id="services"><div class="section-head"><div><div class="section-kicker">TCFLiCK SERVICES</div><h2>Our Services</h2><p>현재 운영 중이거나 개발하고 있는 서비스</p></div><a class="service-link" href="/services.html">전체 서비스 보기 →</a></div><div class="grid">
 <a class="card card-live" href="https://mingka.tcflick.com/"><span class="live-badge">LIVE</span><div><img class="service-image" src="/ChatGPT%20Image%202026%EB%85%84%209%EC%9B%94%2012%EC%9D%BC%20%EC%98%A4%ED%9B%84%2012_15_07.png" alt="MINGKA 밍카"/><h3>MINGKA · 밍카</h3><p>간단한 질문을 통해 나에게 맞는 자동차 장기렌트·리스 이용 방법을 확인하고 상담 경로를 찾아볼 수 있습니다.</p></div><span class="status">서비스 이용하기</span></a>
 <a class="card card-live" href="https://noviq.tcflick.com/"><span class="live-badge">LIVE</span><div><img class="service-image" src="/ChatGPT%20Image%202026%EB%85%84%209%EC%9B%94%2012%EC%9D%BC%20%EC%98%A4%ED%9B%84%2012_16_15.png" alt="NOVIQ 노빅"/><h3>NOVIQ · 노빅</h3><p>생활에 필요한 다양한 계산기를 한곳에서 빠르게 찾아 이용할 수 있는 계산기 서비스입니다.</p></div><span class="status">서비스 이용하기</span></a>
@@ -61,34 +96,7 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 <a class="card card-live" href="https://movoka.tcflick.com/"><span class="live-badge">LIVE</span><div><img class="service-image" src="https://raw.githubusercontent.com/kjh9410065-art/movoka/main/%EB%AA%A8%EB%B3%B4%EC%B9%B4%20%ED%8C%8C%EB%B9%84%EC%BD%98.png" alt="MOVOKA 모보카"/><h3>MOVOKA · 모보카</h3><p>연극, 뮤지컬, 클래식, 콘서트 등 다양한 공연정보를 한곳에서 찾고 공식 예매 사이트까지 확인할 수 있는 공연정보 서비스입니다.</p></div><span class="status">서비스 이용하기</span></a>
 <a class="card disabled" href="javascript:void(0)" aria-label="문서담 준비중"><span class="soon-badge">준비중</span><div><img class="service-image" src="https://raw.githubusercontent.com/kjh9410065-art/MUNSUDAM/main/favicon.svg" alt="문서담 준비중"/><h3>MUNSUDAM · 문서담</h3><p>생활과 업무에 필요한 문서 양식을 쉽고 빠르게 찾고 활용할 수 있는 문서 서비스입니다.</p></div><span class="status">서비스 준비중</span></a>
 </div></section>
-<section id="guide" class="service-guide" aria-labelledby="guide-title">
-<div class="section-head"><div><div class="section-kicker">HOW TCFLiCK WORKS</div><h2 id="guide-title">서비스를 이렇게 만듭니다</h2><p>TCFLiCK은 단순히 외부 서비스를 모아 보여주는 사이트가 아니라, 각 목적에 맞는 서비스를 직접 기획하고 운영합니다.</p></div></div>
-<div class="guide-grid">
-<article class="guide-card"><span class="guide-num">01</span><h3>문제를 먼저 정합니다</h3><p>사용자가 어디에서 불편을 겪는지 정하고, 한 번의 방문으로 실제 문제를 해결할 수 있는 기능을 중심으로 서비스를 설계합니다.</p></article>
-<article class="guide-card"><span class="guide-num">02</span><h3>목적에 맞게 서비스를 나눕니다</h3><p>차량 이용 비교, 계산, AI 서비스 탐색, 공연정보처럼 서로 다른 목적은 각각 독립된 서비스로 운영합니다.</p></article>
-<article class="guide-card"><span class="guide-num">03</span><h3>실제로 사용할 수 있게 만듭니다</h3><p>정보만 나열하는 데 그치지 않고 검색, 계산, 비교, 진단 등 각 서비스의 핵심 기능을 직접 사용할 수 있도록 구성합니다.</p></article>
-<article class="guide-card"><span class="guide-num">04</span><h3>사용하면서 계속 개선합니다</h3><p>서비스를 공개한 뒤에도 화면, 기능, 설명, 이용 흐름을 계속 점검하고 필요한 내용을 추가합니다.</p></article>
-</div>
-</section>
-<section id="service-map" class="service-map" aria-labelledby="map-title">
-<div class="section-head"><div><div class="section-kicker">SERVICE MAP</div><h2 id="map-title">각 서비스가 해결하는 문제</h2><p>TCFLiCK 안의 서비스는 서로 다른 목적을 가지고 있습니다.</p></div></div>
-<div class="map-grid">
-<article><h3>MINGKA · 밍카</h3><p><strong>자동차 이용 방법을 비교하고 싶을 때</strong><br>몇 가지 조건을 입력해 장기렌트와 리스 등 차량 이용 방식을 살펴보고 상담 경로를 확인합니다.</p><a href="https://mingka.tcflick.com/">밍카 이용하기 →</a></article>
-<article><h3>NOVIQ · 노빅</h3><p><strong>계산 결과를 빠르게 확인하고 싶을 때</strong><br>급여, 날짜, 이자 등 생활에 필요한 계산기를 목적별로 찾아 바로 사용할 수 있습니다.</p><a href="https://noviq.tcflick.com/">노빅 이용하기 →</a></article>
-<article><h3>NERDING · 너딩</h3><p><strong>어떤 AI·개발 서비스를 써야 할지 찾을 때</strong><br>목적과 분야를 기준으로 서비스를 탐색하고 필요한 정보를 비교할 수 있습니다.</p><a href="https://mova.tcflick.com/">너딩 이용하기 →</a></article>
-<article><h3>MOVOKA · 모보카</h3><p><strong>공연을 찾고 예매 정보를 확인하고 싶을 때</strong><br>공연 종류와 지역 등을 기준으로 정보를 찾고 공식 예매 경로를 확인할 수 있습니다.</p><a href="https://movoka.tcflick.com/">모보카 이용하기 →</a></article>
-</div>
-</section>
-
-<section class="original-content" aria-labelledby="original-title">
-<div class="section-head"><div><div class="section-kicker">TCFLiCK ORIGINAL</div><h2 id="original-title">TCFLiCK을 직접 운영하며 정리한 서비스 이용 기준</h2><p>서비스를 실제로 만들고 운영하면서 정리한 기준입니다. 단순한 서비스 목록보다 방문자가 판단할 수 있는 정보를 제공하는 것을 목표로 합니다.</p></div></div>
-<div class="guide-grid">
-<article class="guide-card"><span class="guide-num">01</span><h3>서비스를 여러 개로 나누는 이유</h3><p>차량 이용, 계산, AI 도구, 공연정보는 사용 목적과 필요한 정보가 서로 다릅니다. 하나의 페이지에 모든 기능을 넣으면 원하는 기능을 찾기 어려워질 수 있기 때문에 TCFLiCK에서는 목적별 서비스를 독립적으로 운영하고 메인 사이트에서는 각 서비스의 차이와 이용 방법을 설명합니다.</p></article>
-<article class="guide-card"><span class="guide-num">02</span><h3>정보를 확인한 뒤 외부 사이트로 이동합니다</h3><p>상담, 계약, 결제, 예매처럼 외부 사업자의 처리가 필요한 경우에는 사용자가 먼저 서비스의 목적과 기본 정보를 이해할 수 있도록 안내합니다. 실제 계약이나 결제 조건은 연결된 공식 사업자의 최신 안내를 확인해야 합니다.</p></article>
-<article class="guide-card"><span class="guide-num">03</span><h3>서비스 설명과 실제 기능을 구분합니다</h3><p>TCFLiCK은 설명 페이지와 실제 서비스 페이지를 구분합니다. NOVIQ처럼 웹에서 직접 계산하는 기능, MOVOKA처럼 공연을 검색하는 기능 등 각 서비스의 핵심 기능은 해당 서비스에서 직접 이용하도록 구성하고 있습니다.</p></article>
-<article class="guide-card"><span class="guide-num">04</span><h3>업데이트가 필요한 정보는 계속 확인합니다</h3><p>서비스의 기능이나 이용 흐름이 바뀌면 메인 설명과 서비스 페이지도 함께 수정합니다. 주요 변경 내용은 공지사항에 기록해 방문자가 서비스의 현재 상태를 확인할 수 있도록 운영합니다.</p></article>
-</div>
-</section>
+<section class="service-guide" aria-labelledby="explore-title"><div class="section-head"><div><div class="section-kicker">EXPLORE TCFLiCK</div><h2 id="explore-title">더 자세한 내용은 탭에서 확인하세요</h2><p>서비스 전체 설명과 이용 방법, 실제 활용 정보는 각각의 페이지에서 독립적으로 확인할 수 있습니다.</p></div></div><div class="mini-grid"><a class="mini" href="/services.html"><strong>서비스</strong><span>4개 서비스의 목적과 주요 기능을 한눈에 확인합니다.</span></a><a class="mini" href="/guide.html"><strong>이용 안내</strong><span>내 목적에 맞는 서비스를 선택하고 이용 흐름을 확인합니다.</span></a><a class="mini" href="/insights.html"><strong>인사이트</strong><span>서비스를 만든 이유와 활용 방법을 자세히 살펴봅니다.</span></a></div></section>
 <section class="original-content" aria-labelledby="comparison-title">
 <div class="section-head"><div><div class="section-kicker">QUICK REFERENCE</div><h2 id="comparison-title">서비스를 한눈에 비교하기</h2></div></div>
 <div class="map-grid">
@@ -127,9 +135,28 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 </section>
 <section id="about" class="brand-section"><div class="vision"><h2>필요한 서비스를 만듭니다.</h2><p>TCFLiCK은 일상에서 필요한 서비스부터 비즈니스에 필요한 도구까지, 사람들이 실제로 필요로 하는 서비스를 직접 만들고 하나씩 새로운 서비스를 선보입니다.</p></div><div class="mini-grid"><div class="mini"><strong>Simple</strong><span>복잡한 과정을 줄이고 쉽게 사용할 수 있도록 만듭니다.</span></div><div class="mini"><strong>Useful</strong><span>실제로 필요한 기능과 서비스를 만드는 것을 우선합니다.</span></div><div class="mini"><strong>Continue</strong><span>하나의 서비스에 머무르지 않고 계속 새로운 서비스를 만듭니다.</span></div></div></section>
 </div></main>
-<footer><div class="wrap"><div class="footer-row"><div>© 2026 TCFLiCK. All rights reserved.</div><div class="footer-links"><a href="/services.html">서비스</a><a href="/notice.html">공지사항</a><a href="/contact.html">문의하기</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/affiliate.html">제휴·광고 안내</a></div></div></div></footer>
+<footer class="site-footer"><div class="site-wrap site-footer-row">
+<div>© 2026 TCFLiCK. All rights reserved.</div>
+<div class="site-footer-links">
+<a href="/services.html">서비스</a><a href="/guide.html">이용 안내</a><a href="/insights.html">인사이트</a><a href="/notice.html">공지사항</a><a href="/contact.html">문의</a><a href="/affiliate.html">제휴 및 광고 고지</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a>
+</div></div></footer>
 <script>
 const themeToggle=document.getElementById('themeToggle');function updateThemeIcon(){themeToggle.textContent=document.documentElement.classList.contains('dark')?'☀':'☾'}updateThemeIcon();themeToggle.addEventListener('click',()=>{document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',document.documentElement.classList.contains('dark')?'dark':'light');updateThemeIcon()});
+</script>
+<script id="site-navigation-script">
+(function(){
+  const path=location.pathname.replace(/\/$/,'')||'/';
+  const page=path==='/'?'home':path.includes('services')?'services':path.includes('guide')?'guide':path.includes('insights')?'insights':path.includes('notice')?'notice':path.includes('contact')?'contact':'';
+  document.querySelectorAll('.site-nav-links a[data-page]').forEach(a=>{if(a.dataset.page===page){a.classList.add('active');a.setAttribute('aria-current','page');}});
+  const menu=document.getElementById('siteMenuToggle'), links=document.getElementById('siteNavLinks');
+  if(menu&&links){menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));}
+  const theme=document.getElementById('themeToggle');
+  if(theme){
+    const sync=()=>{theme.textContent=document.documentElement.classList.contains('dark')?'☀':'☾';};
+    sync();
+    theme.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',dark?'dark':'light');sync();});
+  }
+})();
 </script>
 </body>
 </html>
