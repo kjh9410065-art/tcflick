@@ -3,7 +3,7 @@
   const items=[
     ['홈','/','home'],['서비스','/services.html','services'],['이용 안내','/guide.html','guide'],['인사이트','/insights.html','insights'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
-  const path=location.pathname.replace(/\\/$/,'')||'/';
+  const path=location.pathname.replace(/\/$/,'')||'/';
   const current=path==='/'?'home':(items.find(x=>x[1]===path)||[])[2]||'';
   const links=items.map(x=>'<a href="'+x[1]+'" class="'+(x[2]===current?'active':'')+'">'+x[0]+'</a>').join('');
   const header=document.createElement('header');header.className='tcflick-global-header';
