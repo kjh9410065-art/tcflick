@@ -1,7 +1,7 @@
 /* TCFLiCK의 모든 주요 페이지에 동일한 헤더를 제공하고 현재 페이지를 표시합니다. */
 (function(){
   const items=[
-    ['홈','/','home'],['서비스','/services.html','services'],['이용 안내','/guide.html','guide'],['인사이트','/insights.html','insights'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
+    ['홈','/','home'],['서비스','/services.html','services'],['이용 안내','/guide.html','guide'],['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
   const path=location.pathname.replace(/\/$/,'')||'/';
   const current=path==='/'?'home':(items.find(x=>x[1]===path)||[])[2]||'';
