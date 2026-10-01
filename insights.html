@@ -14,7 +14,7 @@ html.dark{--ink:#f1f5f9;--muted:#94a3b8;--line:#273449;--bg:#080d18;--white:#111
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Pretendard,"Noto Sans KR",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(980px,calc(100% - 32px));margin:auto}
 header{border-bottom:1px solid var(--line);background:var(--white)}nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:950;letter-spacing:-1px}.logo span{color:var(--blue)}.home{font-size:13px;font-weight:800;color:var(--muted)}.home:hover{color:var(--blue)}
 main{padding:70px 0}.kicker{display:inline-block;padding:7px 12px;border:1px solid #bfdbfe;border-radius:999px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900;letter-spacing:1px}h1{margin:20px 0 12px;font-size:clamp(38px,7vw,64px);line-height:1.08;letter-spacing:-3px}.lead{max-width:760px;margin:0;color:var(--muted);font-size:16px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}.card{padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.card h2{margin:0 0 12px;font-size:22px;line-height:1.35}.card p{margin:8px 0;color:var(--muted);font-size:14px}.card ul{margin:12px 0 0;padding-left:20px;color:var(--muted);font-size:14px}.card li{margin:5px 0}.tag{display:inline-block;margin-bottom:14px;padding:5px 9px;border-radius:8px;background:var(--soft);color:var(--blue);font-size:10px;font-weight:900}.go{display:inline-flex;margin-top:15px;color:var(--blue);font-size:13px;font-weight:900}.wide{margin-top:16px;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--white)}.wide h2{margin:0 0 12px;font-size:23px}.wide p{margin:8px 0;color:var(--muted);font-size:14px}.wide strong{color:var(--ink)}.note{margin-top:22px;padding:22px;border-radius:18px;background:var(--soft);border:1px solid #bfdbfe;font-size:13px}.back{display:inline-flex;margin-top:28px;color:var(--blue);font-size:13px;font-weight:900}footer{padding:35px 0 55px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}@media(max-width:700px){.grid{grid-template-columns:1fr}main{padding:52px 0}.wrap{width:min(100% - 24px,980px)}.card,.wide{padding:23px}}
-<style id="site-navigation-style">
+
 .site-header{position:sticky;top:0;z-index:100;background:var(--header,rgba(248,250,252,.88));backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .site-wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
 .site-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
@@ -36,10 +36,7 @@ main{padding:70px 0}.kicker{display:inline-block;padding:7px 12px;border:1px sol
   .site-menu-toggle{display:block}.site-nav{position:relative}.site-footer-row{flex-direction:column}.site-footer-links{justify-content:flex-start}
 }
 </style>
-</style>
 <script>(function(){const saved=localStorage.getItem('tcflick-theme');if(saved==='dark'||(!saved&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')})();</script>
-<link rel="stylesheet" href="/site-nav.css">
-<script src="/site-nav.js" defer></script>
 </head>
 <body>
 <header class="site-header"><div class="site-wrap"><nav class="site-nav" aria-label="주요 메뉴">
