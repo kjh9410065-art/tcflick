@@ -21,6 +21,8 @@ header{position:sticky;top:0;z-index:10;background:var(--header);backdrop-filter
 // 저장된 테마가 있으면 즉시 적용하고, 없으면 사용자의 시스템 설정을 따릅니다.
 (function(){const saved=localStorage.getItem('tcflick-theme');const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.classList.add('dark');})();
 </script>
+<link rel="stylesheet" href="/site-nav.css">
+<script src="/site-nav.js" defer></script>
 </head>
 <body>
 <header><div class="wrap"><nav><a class="logo" href="/">TC<span class="flick">FLiCK</span></a><div class="nav"><a class="back" href="/">← 메인으로</a><button class="theme" id="themeToggle" aria-label="다크모드 전환">☾</button></div></nav></div></header>
