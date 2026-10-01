@@ -17,7 +17,7 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between}.l
 main{padding:70px 0}.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #bfdbfe;border-radius:999px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900;letter-spacing:1px}h1{margin:20px 0 10px;font-size:clamp(38px,7vw,58px);line-height:1.1;letter-spacing:-3px}.lead{margin:0 0 24px;color:var(--muted);font-size:15px}.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.category{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--muted);font-size:12px;font-weight:900;cursor:pointer}.category.active,.category:hover{border-color:#93b4f8;color:var(--blue);background:var(--soft)}.notice-category{display:inline-flex;margin-right:8px;padding:4px 8px;border-radius:7px;background:var(--soft);color:var(--blue);font-size:10px;font-weight:900;vertical-align:middle}
 .notice-list{display:grid;gap:10px}.notice{border:1px solid var(--line);border-radius:18px;background:var(--white);overflow:hidden}.notice summary{padding:21px 24px;cursor:pointer;list-style:none;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:15px}.notice summary::-webkit-details-marker{display:none}.notice summary:after{content:"＋";color:var(--blue);font-size:18px}.notice[open] summary:after{content:"−"}.notice-body{padding:0 24px 23px;border-top:1px solid var(--line)}.date{display:block;color:var(--blue);font-size:12px;font-weight:900;margin:18px 0 7px}.notice p{margin:0;color:var(--muted);font-size:14px}.home-btn{display:inline-flex;margin-top:30px;padding:12px 17px;border:1px solid var(--line);border-radius:13px;background:var(--white);font-size:13px;font-weight:900}.home-btn:hover{border-color:#93b4f8;color:var(--blue)}footer{border-top:1px solid var(--line);padding:32px 0 50px;color:var(--muted);font-size:12px}
 @media(max-width:600px){.wrap{width:min(100% - 24px,900px)}main{padding:50px 0}.notice summary{padding:19px 18px}.notice-body{padding:0 18px 20px}.nav .back{display:none}h1{letter-spacing:-2px}}
-<style id="site-navigation-style">
+
 .site-header{position:sticky;top:0;z-index:100;background:var(--header,rgba(248,250,252,.88));backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .site-wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
 .site-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
@@ -39,12 +39,9 @@ main{padding:70px 0}.eyebrow{display:inline-flex;padding:7px 12px;border:1px sol
   .site-menu-toggle{display:block}.site-nav{position:relative}.site-footer-row{flex-direction:column}.site-footer-links{justify-content:flex-start}
 }
 </style>
-</style>
 <script>
 (function(){const saved=localStorage.getItem('tcflick-theme');const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.classList.add('dark');})();
 </script>
-<link rel="stylesheet" href="/site-nav.css">
-<script src="/site-nav.js" defer></script>
 </head>
 <body>
 <header class="site-header"><div class="site-wrap"><nav class="site-nav" aria-label="주요 메뉴">
