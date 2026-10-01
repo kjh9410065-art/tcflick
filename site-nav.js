@@ -14,10 +14,20 @@
   const menu=document.getElementById('tcflickMenu'),panel=document.getElementById('tcflickMobile');
   const mobileQuery=window.matchMedia('(max-width:820px)');
   const setMobileHeader=()=>{if(!mobileQuery.matches){header.classList.remove('mobile-open');return;}};
+  const openMobileHeader=()=>{if(mobileQuery.matches)header.classList.add('mobile-open');};
+  const toggleMobileHeader=()=>{if(mobileQuery.matches)header.classList.toggle('mobile-open');};
   header.addEventListener('click',(event)=>{
     if(!mobileQuery.matches)return;
-    if(event.target===header){header.classList.toggle('mobile-open');}
+    if(event.target===header||event.target===header.querySelector('.tcflick-nav-wrap'))toggleMobileHeader();
   });
+  header.addEventListener('touchstart',(event)=>{
+    if(!mobileQuery.matches)return;
+    if(event.target===header||event.target===header.querySelector('.tcflick-nav-wrap'))openMobileHeader();
+  },{passive:true});
+  document.addEventListener('touchstart',(event)=>{
+    if(!mobileQuery.matches)return;
+    if(event.touches[0] && event.touches[0].clientY<=28)openMobileHeader();
+  },{passive:true});
   menu.onclick=(event)=>{
     event.stopPropagation();
     const open=panel.classList.toggle('open');
