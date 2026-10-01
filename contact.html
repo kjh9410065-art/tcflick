@@ -20,7 +20,7 @@ html.dark{--ink:#f1f5f9;--muted:#94a3b8;--line:#273449;--bg:#080d18;--white:#111
 header{border-bottom:1px solid var(--line);background:var(--white)}nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:950;letter-spacing:-1px}.logo span{color:var(--blue)}.home{font-size:13px;font-weight:800;color:var(--muted)}.home:hover{color:var(--blue)}
 main{padding:80px 0}.kicker{display:inline-block;padding:7px 12px;border:1px solid #bfdbfe;border-radius:999px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:900;letter-spacing:1px}.card{margin-top:20px;padding:42px;border:1px solid var(--line);border-radius:28px;background:var(--white);box-shadow:0 18px 45px rgba(15,23,42,.06)}h1{margin:0;font-size:clamp(34px,7vw,56px);line-height:1.1;letter-spacing:-2.5px} .lead{margin:18px 0 0;color:var(--muted);font-size:16px}section{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}h2{margin:0 0 9px;font-size:19px;letter-spacing:-.5px}p{margin:0;color:var(--muted);font-size:14px}.mail{display:inline-flex;margin-top:18px;padding:14px 18px;border-radius:14px;background:var(--blue);color:#fff;font-weight:900;font-size:14px}.mail:hover{background:var(--blue-dark)}footer{padding:30px 0 50px;color:var(--muted);font-size:12px}
 @media(max-width:600px){main{padding:55px 0}.card{padding:28px 22px}}
-<style id="site-navigation-style">
+
 .site-header{position:sticky;top:0;z-index:100;background:var(--header,rgba(248,250,252,.88));backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .site-wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
 .site-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
@@ -42,10 +42,7 @@ main{padding:80px 0}.kicker{display:inline-block;padding:7px 12px;border:1px sol
   .site-menu-toggle{display:block}.site-nav{position:relative}.site-footer-row{flex-direction:column}.site-footer-links{justify-content:flex-start}
 }
 </style>
-</style>
 <script>(function(){const saved=localStorage.getItem('tcflick-theme');if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');})();</script>
-<link rel="stylesheet" href="/site-nav.css">
-<script src="/site-nav.js" defer></script>
 </head>
 <body>
 <header class="site-header"><div class="site-wrap"><nav class="site-nav" aria-label="주요 메뉴">
