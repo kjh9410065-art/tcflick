@@ -1,9 +1,9 @@
 /* TCFLiCK 전체 페이지에서 하나의 공통 상단 네비게이션만 사용합니다. */
-.tcflick-global-header{position:sticky!important;top:0!important;z-index:9999!important;width:100%!important;height:12px!important;overflow:hidden!important;background:rgba(248,250,252,.9)!important;backdrop-filter:blur(18px)!important;border-bottom:1px solid #e2e8f0!important;transition:height .25s ease,box-shadow .25s ease!important}
+.tcflick-global-header{position:sticky!important;top:0!important;z-index:9999!important;width:100%!important;height:126px!important;overflow:hidden!important;background:rgba(248,250,252,.9)!important;backdrop-filter:blur(18px)!important;border-bottom:1px solid #e2e8f0!important;transition:height .25s ease,box-shadow .25s ease!important}
 html.dark .tcflick-global-header{background:rgba(8,13,24,.92)!important;border-color:#273449!important}
-.tcflick-nav-wrap{position:relative;width:min(1180px,calc(100% - 32px));height:70px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(-8px);opacity:0;transition:transform .25s ease,opacity .2s ease}
+.tcflick-nav-wrap{position:relative;width:min(1180px,calc(100% - 32px));height:126px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(0);opacity:1;transition:transform .25s ease,opacity .2s ease}
 @media (hover:hover) and (pointer:fine) and (min-width:821px){
-  .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:70px!important;box-shadow:0 12px 35px rgba(15,23,42,.12)!important}
+  .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:126px!important;box-shadow:0 12px 35px rgba(15,23,42,.12)!important}
   .tcflick-global-header:hover .tcflick-nav-wrap,.tcflick-global-header:focus-within .tcflick-nav-wrap{transform:translateY(0);opacity:1}
 }
 .tcflick-global-logo{font-size:23px;font-weight:950;letter-spacing:-1.2px;color:#0f172a!important;white-space:nowrap}
