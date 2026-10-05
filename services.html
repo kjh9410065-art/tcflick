@@ -123,20 +123,5 @@ const btn=document.getElementById('themeToggle');
 function syncTheme(){const dark=document.documentElement.classList.contains('dark');btn.textContent=dark?'☀':'☾'}
 syncTheme();btn.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',dark?'dark':'light');syncTheme()});
 </script>
-<script id="site-navigation-script">
-(function(){
-  const path=location.pathname.replace(/\/$/,'')||'/';
-  const page=path==='/'?'home':path.includes('services')?'services':path.includes('guide')?'guide':path.includes('insights')?'insights':path.includes('notice')?'notice':path.includes('contact')?'contact':'';
-  document.querySelectorAll('.site-nav-links a[data-page]').forEach(a=>{if(a.dataset.page===page){a.classList.add('active');a.setAttribute('aria-current','page');}});
-  const menu=document.getElementById('siteMenuToggle'), links=document.getElementById('siteNavLinks');
-  if(menu&&links){menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));}
-  const theme=document.getElementById('themeToggle');
-  if(theme){
-    const sync=()=>{theme.textContent=document.documentElement.classList.contains('dark')?'☀':'☾';};
-    sync();
-    theme.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',dark?'dark':'light');sync();});
-  }
-})();
-</script>
 </body>
 </html>
