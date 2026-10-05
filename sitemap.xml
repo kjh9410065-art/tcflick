@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tcflick.com/</loc><lastmod>2026-10-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tcflick.com/services.html</loc><lastmod>2026-10-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tcflick.com/contact.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://tcflick.com/privacy.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://tcflick.com/terms.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://tcflick.com/affiliate.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tcflick.com/notice.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://tcflick.com/guide.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tcflick.com/insights.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tcflick.com/guide-mingka.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tcflick.com/guide-noviq.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tcflick.com/guide-nerding.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tcflick.com/guide-movoka.html</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://tcflick.com/faq.html</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://tcflick.com/</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tcflick.com/about.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tcflick.com/services.html</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tcflick.com/contact.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://tcflick.com/privacy.html</loc><lastmod>2026-10-05</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://tcflick.com/terms.html</loc><lastmod>2026-10-05</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://tcflick.com/affiliate.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://tcflick.com/notice.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://tcflick.com/guide.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tcflick.com/insights.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tcflick.com/guide-mingka.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tcflick.com/guide-noviq.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tcflick.com/guide-nerding.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tcflick.com/guide-movoka.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://tcflick.com/faq.html</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>
