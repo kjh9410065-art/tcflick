@@ -1,41 +1,49 @@
-/* TCFLiCK의 모든 주요 페이지에 동일한 헤더를 제공하고 현재 페이지를 표시합니다. */
+/* TCFLiCK의 모든 주요 페이지에 동일한 헤더를 만들고 현재 페이지를 표시합니다. */
 (function(){
   const items=[
-    ['홈','/','home'],['서비스','/services.html','services'],['이용 안내','/guide.html','guide'],['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
+    ['홈','/','home'],['서비스','/services.html','services'],['이용 안내','/guide.html','guide'],
+    ['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
   const path=location.pathname.replace(/\/$/,'')||'/';
-  const current=path==='/'?'home':(items.find(x=>x[1]===path)||[])[2]||'';
-  const links=items.map(x=>'<a href="'+x[1]+'" class="'+(x[2]===current?'active':'')+'">'+x[0]+'</a>').join('');
-  const header=document.createElement('header');header.className='tcflick-global-header';
-  header.innerHTML='<div class="tcflick-nav-wrap"><a class="tcflick-global-logo" href="/" aria-label="TCFLiCK 홈">TC<span>FLiCK</span></a><nav class="tcflick-nav-links" aria-label="주요 메뉴">'+links+'</nav><div class="tcflick-nav-actions"><button class="tcflick-theme-btn" id="tcflickTheme" aria-label="다크모드 전환">☾</button><button class="tcflick-menu-btn" id="tcflickMenu" aria-label="메뉴 열기" aria-expanded="false">☰</button></div></div><nav class="tcflick-mobile-panel" id="tcflickMobile" aria-label="모바일 메뉴">'+links+'</nav>';
-  const old=document.querySelector('body>header');if(old)old.replaceWith(header);else document.body.prepend(header);
-  document.documentElement.classList.toggle('dark',localStorage.getItem('tcflick-theme')==='dark'||(!localStorage.getItem('tcflick-theme')&&matchMedia('(prefers-color-scheme: dark)').matches));
-  const theme=document.getElementById('tcflickTheme');const sync=()=>theme.textContent=document.documentElement.classList.contains('dark')?'☀':'☾';sync();theme.onclick=()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('tcflick-theme',d?'dark':'light');sync()};
-  const menu=document.getElementById('tcflickMenu'),panel=document.getElementById('tcflickMobile');
-  const mobileQuery=window.matchMedia('(max-width:820px)');
-  const setMobileHeader=()=>{if(!mobileQuery.matches){header.classList.remove('mobile-open');return;}};
-  const openMobileHeader=()=>{if(mobileQuery.matches)header.classList.add('mobile-open');};
-  const toggleMobileHeader=()=>{if(mobileQuery.matches)header.classList.toggle('mobile-open');};
-  header.addEventListener('click',(event)=>{
-    if(!mobileQuery.matches)return;
-    if(event.target===header||event.target===header.querySelector('.tcflick-nav-wrap'))toggleMobileHeader();
-  });
-  header.addEventListener('touchstart',(event)=>{
-    if(!mobileQuery.matches)return;
-    if(event.target===header||event.target===header.querySelector('.tcflick-nav-wrap'))openMobileHeader();
-  },{passive:true});
-  document.addEventListener('touchstart',(event)=>{
-    if(!mobileQuery.matches)return;
-    if(event.touches[0] && event.touches[0].clientY<=28)openMobileHeader();
-  },{passive:true});
-  menu.onclick=(event)=>{
-    event.stopPropagation();
-    const open=panel.classList.toggle('open');
-    header.classList.add('mobile-open');
-    menu.setAttribute('aria-expanded',open?'true':'false');
-    menu.textContent=open?'×':'☰';
+  const current=path==='/'?'home':(items.find(item=>item[1]===path)||[])[2]||'';
+  const links=items.map(item=>'<a href="'+item[1]+'" class="'+(item[2]===current?'active':'')+'"'+(item[2]===current?' aria-current="page"':'')+'>'+item[0]+'</a>').join('');
+  const header=document.createElement('header');
+  header.className='tcflick-global-header';
+  header.setAttribute('aria-label','TCFLiCK 공통 메뉴');
+  header.innerHTML='<div class="tcflick-nav-wrap"><a class="tcflick-global-logo" href="/" aria-label="TCFLiCK 홈">TC<span>FLiCK</span></a><nav class="tcflick-nav-links" aria-label="주요 메뉴">'+links+'</nav><div class="tcflick-nav-actions"><button class="tcflick-theme-btn" id="tcflickTheme" type="button" aria-label="다크모드 전환">☾</button></div></div>';
+  const old=document.querySelector('body>header');
+  if(old) old.replaceWith(header); else document.body.prepend(header);
+
+  const applyTheme=()=>{
+    const saved=localStorage.getItem('tcflick-theme');
+    const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.classList.toggle('dark',dark);
+    const button=document.getElementById('tcflickTheme');
+    if(button) button.textContent=dark?'☀':'☾';
   };
-  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{panel.classList.remove('open');}));
-  window.addEventListener('resize',setMobileHeader);
-  setMobileHeader();
+  applyTheme();
+
+  const theme=document.getElementById('tcflickTheme');
+  if(theme) theme.addEventListener('click',event=>{
+    event.stopPropagation();
+    const dark=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',dark);
+    localStorage.setItem('tcflick-theme',dark?'dark':'light');
+    theme.textContent=dark?'☀':'☾';
+  });
+
+  const isMobile=()=>window.matchMedia('(max-width:820px)').matches;
+  const setOpen=open=>{
+    if(isMobile()) header.classList.toggle('mobile-open',open);
+  };
+
+  /* 모바일은 숨겨진 상단 영역 자체를 터치하면 메뉴를 엽니다. */
+  header.addEventListener('pointerdown',event=>{
+    if(!isMobile() || event.target.closest('a,button')) return;
+    const rect=header.getBoundingClientRect();
+    if(event.clientY<=rect.top+24) setOpen(!header.classList.contains('mobile-open'));
+  });
+  header.addEventListener('keydown',event=>{if(event.key==='Escape') setOpen(false);});
+  header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
+  window.addEventListener('resize',()=>{if(!isMobile()) header.classList.remove('mobile-open');});
 })();
