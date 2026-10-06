@@ -1,7 +1,7 @@
 /* TCFLiCK의 모든 주요 페이지에 동일한 헤더를 만들고 현재 페이지를 표시합니다. */
 (function(){
   const items=[
-    ['홈','/','home'],['서비스','/services.html','services'],['TCFLiCK 소개','/about.html','about'],['이용 안내','/guide.html','guide'],
+    ['⌂ 홈','/','home'],['서비스','/services.html','services'],['TCFLiCK 소개','/about.html','about'],['이용 안내','/guide.html','guide'],
     ['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
   const path=location.pathname.replace(/\/$/,'')||'/';
