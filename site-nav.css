@@ -22,11 +22,16 @@ html.dark .tcflick-theme-btn{border-color:#273449;background:#111827;color:#f1f5
   .tcflick-global-header:hover:before,.tcflick-global-header:focus-within:before{opacity:0}
 }
 @media(max-width:820px){
-  .tcflick-global-header{height:76px!important;cursor:pointer}
-  .tcflick-global-header.mobile-open{height:245px!important;overflow:visible!important;box-shadow:0 12px 35px rgba(15,23,42,.12)!important}
-  .tcflick-nav-wrap{height:76px!important;min-height:76px;width:calc(100% - 24px);padding:0;display:grid;grid-template-columns:1fr auto;grid-template-rows:76px auto;transform:translateY(0);opacity:1}
-  .tcflick-global-header:not(.mobile-open) .tcflick-nav-links{display:none}.tcflick-global-header.mobile-open .tcflick-nav-wrap{transform:translateY(0);opacity:1}
-  .tcflick-menu-btn{display:grid!important;place-items:center;width:44px;height:44px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;color:#0f172a;cursor:pointer;font-size:22px;line-height:1}\n  html.dark .tcflick-menu-btn{border-color:#273449;background:#111827;color:#f1f5f9}\n  .tcflick-nav-links{grid-column:1 / -1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:100%;font-size:13px}
+  /* 모바일 헤더는 기본적으로 한 줄만 차지하게 해 첫 화면의 빈 공간을 줄입니다. */
+  .tcflick-global-header{height:76px!important;cursor:default;overflow:visible!important}
+  /* 메뉴를 열었을 때만 메뉴 목록에 필요한 높이를 확보합니다. */
+  .tcflick-global-header.mobile-open{height:330px!important;box-shadow:0 12px 35px rgba(15,23,42,.12)!important}
+  .tcflick-nav-wrap{height:76px!important;min-height:76px;width:calc(100% - 20px);padding:0;display:grid;grid-template-columns:1fr auto;grid-template-rows:76px auto;transform:none;opacity:1}
+  .tcflick-global-header:not(.mobile-open) .tcflick-nav-links{display:none}
+  .tcflick-global-header.mobile-open .tcflick-nav-links{display:grid}
+  .tcflick-menu-btn{display:grid!important;place-items:center;width:44px;height:44px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;color:#0f172a;cursor:pointer;font-size:22px;line-height:1}
+  html.dark .tcflick-menu-btn{border-color:#273449;background:#111827;color:#f1f5f9}
+  .tcflick-nav-links{grid-column:1 / -1;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:100%;font-size:13px}
   .tcflick-nav-links a{padding:11px 13px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;color:#64748b!important}
   .tcflick-nav-links a.active{color:#2563eb!important;border-color:#93b4f8;background:#eff6ff}
   html.dark .tcflick-nav-links a{border-color:#273449;background:#111827;color:#94a3b8!important}
