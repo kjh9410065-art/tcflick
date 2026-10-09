@@ -25,6 +25,10 @@
 <script>
 window.yaContextCb = window.yaContextCb || [];
 </script>
+<script>
+  // Keep this manually placed Yandex ad unit alongside Auto ads when configured as an exception.
+  window.APExceptionBlocks = Array.from(new Set([...(window.APExceptionBlocks || []), "R-A-20181544-1"]));
+</script>
 <script src="https://yandex.ru/ads/system/context.js" async></script>
 <!-- Google Analytics 4: TCFLiCK 전용 측정 ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2QEK9KWW"></script>
