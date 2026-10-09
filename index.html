@@ -119,10 +119,46 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 <script>
 /* 생성된 Yandex 광고 단위를 지정된 영역에 렌더링합니다. */
 window.yaContextCb.push(() => {
+    const targetId = "yandex_rtb_R-A-20181544-1";
+    const target = document.getElementById(targetId);
+    if (!target) {
+      console.error("[TCFLiCK Yandex] 광고 대상 요소를 찾지 못했습니다:", targetId);
+      return;
+    }
+    const before = target.getBoundingClientRect();
+    console.info("[TCFLiCK Yandex] 렌더 요청", {
+      blockId: "R-A-20181544-1",
+      targetId,
+      width: Math.round(before.width),
+      height: Math.round(before.height),
+      connected: target.isConnected
+    });
     Ya.Context.AdvManager.render({
-        "blockId": "R-A-20181544-1",
-        "renderTo": "yandex_rtb_R-A-20181544-1"
-    })
+      blockId: "R-A-20181544-1",
+      renderTo: targetId,
+      onError: (data) => {
+        const node = document.getElementById(targetId);
+        const rect = node?.getBoundingClientRect();
+        console.error("[TCFLiCK Yandex] 광고 요청/렌더 오류", {
+          type: data?.type ?? "unknown",
+          code: data?.code ?? "unknown",
+          text: data?.text ?? "unknown",
+          targetExists: Boolean(node),
+          width: rect ? Math.round(rect.width) : 0,
+          height: rect ? Math.round(rect.height) : 0
+        });
+      },
+      onRender: (data) => {
+        const node = document.getElementById(targetId);
+        const rect = node?.getBoundingClientRect();
+        console.info("[TCFLiCK Yandex] 광고 렌더 콜백", {
+          product: data?.product ?? "unknown",
+          targetExists: Boolean(node),
+          width: rect ? Math.round(rect.width) : 0,
+          height: rect ? Math.round(rect.height) : 0
+        });
+      }
+    });
 })
 </script>
 </section>
