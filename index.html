@@ -29,7 +29,7 @@ window.yaContextCb = window.yaContextCb || [];
   // Keep this manually placed Yandex ad unit alongside Auto ads when configured as an exception.
   window.APExceptionBlocks = Array.from(new Set([...(window.APExceptionBlocks || []), "R-A-20181544-1"]));
 </script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
+<script src="https://yandex.ru/ads/system/context.js" async onload="console.info('[TCFLiCK Yandex] context.js 로드 완료')" onerror="console.error('[TCFLiCK Yandex] context.js 로드 실패')"></script>
 <!-- Google Analytics 4: TCFLiCK 전용 측정 ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2QEK9KWW"></script>
 <script>
@@ -79,7 +79,7 @@ footer{margin-top:55px;border-top:1px solid var(--line);padding:34px 0 55px;colo
 </script>
 <link rel="stylesheet" href="/site-nav.css?v=20261002">
 <script src="/site-nav.js?v=20261002" defer></script>
-<script data-page-id="20181544" src="https://yandex.ru/ads/system/ap-loader.js" async></script>
+<script data-page-id="20181544" src="https://yandex.ru/ads/system/ap-loader.js" async onload="console.info('[TCFLiCK Yandex] ap-loader.js 로드 완료')" onerror="console.error('[TCFLiCK Yandex] ap-loader.js 로드 실패')"></script>
 </head>
 <body class="tcflick-home">
 <main id="top"><div class="wrap">
