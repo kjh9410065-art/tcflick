@@ -4,7 +4,7 @@
     ['⌂ 홈','/','home'],['서비스','/services.html','services'],['TCFLiCK 소개','/about.html','about'],['이용 안내','/guide.html','guide'],
     ['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
-  const path=location.pathname.replace(/\/$/,'')||'/';
+  const path=(location.pathname==='/index.html'?'/':location.pathname).replace(/\/$/,'')||'/';
   const current=path==='/'?'home':(items.find(item=>item[1]===path)||[])[2]||'';
   const links=items.map(item=>'<a href="'+item[1]+'" class="'+(item[2]===current?'active':'')+'"'+(item[2]===current?' aria-current="page"':'')+'>'+item[0]+'</a>').join('');
   const header=document.createElement('header');
@@ -15,7 +15,7 @@
   if(old) old.replaceWith(header); else document.body.prepend(header);
 
   const applyTheme=()=>{
-    const saved=localStorage.getItem('tcflick-theme');
+    let saved=null;try{saved=localStorage.getItem('tcflick-theme');}catch{}
     const dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);
     document.documentElement.classList.toggle('dark',dark);
     const button=document.getElementById('tcflickTheme');
@@ -31,11 +31,11 @@
     event.stopPropagation();
     const dark=!document.documentElement.classList.contains('dark');
     document.documentElement.classList.toggle('dark',dark);
-    localStorage.setItem('tcflick-theme',dark?'dark':'light');
+    try{localStorage.setItem('tcflick-theme',dark?'dark':'light');}catch{}
     theme.textContent=dark?'☀':'☾';
   });
 
-  const isMobile=()=>window.matchMedia('(max-width:820px)').matches;
+  const isMobile=()=>window.matchMedia('(max-width:1050px)').matches;
   const setOpen=open=>{
     if(isMobile()){header.classList.toggle('mobile-open',open);if(menu){menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');menu.textContent=open?'×':'☰';}}
   };
@@ -46,7 +46,8 @@
     const rect=header.getBoundingClientRect();
     if(event.clientY<=rect.top+24) setOpen(!header.classList.contains('mobile-open'));
   });
-  header.addEventListener('keydown',event=>{if(event.key==='Escape') setOpen(false);});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&header.classList.contains('mobile-open')){setOpen(false);menu?.focus();}});
+  document.addEventListener('click',event=>{if(!header.contains(event.target))setOpen(false);});
   header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
   window.addEventListener('resize',()=>{if(!isMobile()){header.classList.remove('mobile-open');if(menu){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','메뉴 열기');menu.textContent='☰';}}});
 })();
