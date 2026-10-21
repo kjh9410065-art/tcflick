@@ -18,6 +18,9 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+      - name: Wait for site deployment after push
+        if: github.event_name == 'push'
+        run: sleep 90
       - name: Check public site and Googlebot response
         run: |
           python3 - <<'PY'
