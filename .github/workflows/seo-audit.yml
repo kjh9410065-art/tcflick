@@ -24,6 +24,7 @@ jobs:
           base = 'https://tcflick.com'
           agents = {'browser': 'Mozilla/5.0 (compatible; TCFLiCK-SiteAudit/1.0)', 'googlebot': 'Googlebot/2.1 (+http://www.google.com/bot.html)'}
           report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'checks': [], 'problems': [], 'note': 'Google index status requires Search Console authentication.'}
+          sitemap_links = []
           for path in ('/', '/robots.txt', '/sitemap.xml'):
             for label, user_agent in agents.items():
               url = base + path
@@ -54,10 +55,39 @@ jobs:
                 try:
                   links = [element.text for element in ET.fromstring(body).findall('.//{*}loc')]
                   result['url_count'] = len(links)
+                  if label == 'browser': sitemap_links = links
                   if len(links) != 16 or any(not url.startswith(base + '/') for url in links):
                     report['problems'].append(f'{path} ({label}): sitemap URL mismatch')
                 except ET.ParseError as error:
                   report['problems'].append(f'{path} ({label}): malformed XML: {error}')
+          # Check every published page, not only the sitemap index.
+          report['pages'] = []
+          for page_url in sitemap_links:
+            req = urllib.request.Request(page_url, headers={'User-Agent': agents['browser']})
+            try:
+              with urllib.request.urlopen(req, timeout=18) as response:
+                html = response.read(600000).decode('utf-8', errors='replace')
+                page = {'url': page_url, 'status': response.status, 'final_url': response.url, 'x_robots_tag': response.headers.get('X-Robots-Tag','')}
+            except urllib.error.HTTPError as error:
+              page = {'url': page_url, 'status': error.code, 'error': str(error)}
+              html = ''
+            except Exception as error:
+              page = {'url': page_url, 'status': 0, 'error': str(error)}
+              html = ''
+            report['pages'].append(page)
+            if page['status'] != 200:
+              report['problems'].append(f'{page_url}: HTTP {page["status"]}')
+              continue
+            if page.get('final_url') != page_url:
+              report['problems'].append(f'{page_url}: redirected to {page.get("final_url")}')
+            if 'noindex' in page.get('x_robots_tag', '').lower() or ('name="robots"' in html.lower() and 'content="noindex' in html.lower()):
+              report['problems'].append(f'{page_url}: noindex detected')
+            if '<html lang="ko">' not in html and '<html lang="ko"' not in html:
+              report['problems'].append(f'{page_url}: lang=ko missing')
+            if 'rel="canonical"' not in html or f'href="{page_url}"' not in html:
+              report['problems'].append(f'{page_url}: canonical link missing or mismatched')
+            if '<title>' not in html or '티씨플릭' not in html.split('</head>')[0]:
+              report['problems'].append(f'{page_url}: Korean brand metadata missing')
           Path('seo-status.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print(json.dumps(report, ensure_ascii=False, indent=2))
           PY
