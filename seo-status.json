@@ -1,0 +1,57 @@
+{
+  "checked_at_utc": "2026-10-21T03:48:35.816417+00:00",
+  "checks": [
+    {
+      "path": "/",
+      "agent": "browser",
+      "status": 200,
+      "url": "https://tcflick.com/",
+      "content_type": "text/html",
+      "x_robots_tag": ""
+    },
+    {
+      "path": "/",
+      "agent": "googlebot",
+      "status": 200,
+      "url": "https://tcflick.com/",
+      "content_type": "text/html",
+      "x_robots_tag": ""
+    },
+    {
+      "path": "/robots.txt",
+      "agent": "browser",
+      "status": 200,
+      "url": "https://tcflick.com/robots.txt",
+      "content_type": "text/plain",
+      "x_robots_tag": ""
+    },
+    {
+      "path": "/robots.txt",
+      "agent": "googlebot",
+      "status": 200,
+      "url": "https://tcflick.com/robots.txt",
+      "content_type": "text/plain",
+      "x_robots_tag": ""
+    },
+    {
+      "path": "/sitemap.xml",
+      "agent": "browser",
+      "status": 200,
+      "url": "https://tcflick.com/sitemap.xml",
+      "content_type": "application/xml",
+      "x_robots_tag": "",
+      "url_count": 16
+    },
+    {
+      "path": "/sitemap.xml",
+      "agent": "googlebot",
+      "status": 200,
+      "url": "https://tcflick.com/sitemap.xml",
+      "content_type": "application/xml",
+      "x_robots_tag": "",
+      "url_count": 16
+    }
+  ],
+  "problems": [],
+  "note": "Google index status requires Search Console authentication."
+}
