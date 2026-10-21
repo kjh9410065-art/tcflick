@@ -1,7 +1,7 @@
 /* TCFLiCK의 모든 주요 페이지에 동일한 헤더를 만들고 현재 페이지를 표시합니다. */
 (function(){
   const items=[
-    ['⌂ 홈','/','home'],['서비스','/services.html','services'],['TCFLiCK 소개','/about.html','about'],['이용 안내','/guide.html','guide'],
+    ['⌂ 홈','/','home'],['서비스','/services.html','services'],['티씨플릭 소개','/about.html','about'],['이용 안내','/guide.html','guide'],
     ['인사이트','/insights.html','insights'],['FAQ','/faq.html','faq'],['공지사항','/notice.html','notice'],['문의','/contact.html','contact']
   ];
   const path=(location.pathname==='/index.html'?'/':location.pathname).replace(/\/$/,'')||'/';
@@ -9,7 +9,7 @@
   const links=items.map(item=>'<a href="'+item[1]+'" class="'+(item[2]===current?'active':'')+'"'+(item[2]===current?' aria-current="page"':'')+'>'+item[0]+'</a>').join('');
   const header=document.createElement('header');
   header.className='tcflick-global-header';
-  header.setAttribute('aria-label','TCFLiCK 공통 메뉴');
+  header.setAttribute('aria-label','티씨플릭 TCFLiCK 공통 메뉴');
   header.innerHTML='<div class="tcflick-nav-wrap"><a class="tcflick-global-logo" href="/" aria-label="TCFLiCK 홈">TC<span>FLiCK</span></a><nav class="tcflick-nav-links" aria-label="주요 메뉴">'+links+'</nav><div class="tcflick-nav-actions"><button class="tcflick-menu-btn" id="tcflickMenu" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button><button class="tcflick-theme-btn" id="tcflickTheme" type="button" aria-label="다크모드 전환">☾</button></div></div>';
   const old=document.querySelector('body>header');
   if(old) old.replaceWith(header); else document.body.prepend(header);
