@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-21T03:50:00.038205+00:00",
+  "checked_at_utc": "2026-10-21T03:52:59.447155+00:00",
   "checks": [
     {
       "path": "/",
@@ -54,17 +54,29 @@
   ],
   "problems": [
     "https://tcflick.com/about.html: redirected to https://tcflick.com/about",
+    "https://tcflick.com/about.html: canonical link missing or mismatched",
     "https://tcflick.com/services.html: redirected to https://tcflick.com/services",
+    "https://tcflick.com/services.html: canonical link missing or mismatched",
     "https://tcflick.com/contact.html: redirected to https://tcflick.com/contact",
+    "https://tcflick.com/contact.html: canonical link missing or mismatched",
     "https://tcflick.com/privacy.html: redirected to https://tcflick.com/privacy",
+    "https://tcflick.com/privacy.html: canonical link missing or mismatched",
     "https://tcflick.com/terms.html: redirected to https://tcflick.com/terms",
+    "https://tcflick.com/terms.html: canonical link missing or mismatched",
     "https://tcflick.com/affiliate.html: redirected to https://tcflick.com/affiliate",
+    "https://tcflick.com/affiliate.html: canonical link missing or mismatched",
     "https://tcflick.com/notice.html: redirected to https://tcflick.com/notice",
+    "https://tcflick.com/notice.html: canonical link missing or mismatched",
     "https://tcflick.com/guide.html: redirected to https://tcflick.com/guide",
+    "https://tcflick.com/guide.html: canonical link missing or mismatched",
     "https://tcflick.com/insights.html: redirected to https://tcflick.com/insights",
+    "https://tcflick.com/insights.html: canonical link missing or mismatched",
     "https://tcflick.com/guide-mingka.html: redirected to https://tcflick.com/guide-mingka",
+    "https://tcflick.com/guide-mingka.html: canonical link missing or mismatched",
     "https://tcflick.com/guide-noviq.html: redirected to https://tcflick.com/guide-noviq",
+    "https://tcflick.com/guide-noviq.html: canonical link missing or mismatched",
     "https://tcflick.com/guide-nerding.html: redirected to https://tcflick.com/guide-nerding",
+    "https://tcflick.com/guide-nerding.html: canonical link missing or mismatched",
     "https://tcflick.com/guide-movoka.html: redirected to https://tcflick.com/guide-movoka",
     "https://tcflick.com/guide-munseodam.html: redirected to https://tcflick.com/guide-munseodam",
     "https://tcflick.com/faq.html: redirected to https://tcflick.com/faq"
