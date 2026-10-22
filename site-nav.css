@@ -93,3 +93,26 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
  .tcflick-global-header .tcflick-nav-links{height:auto!important;min-height:0!important;align-content:center!important;padding:12px 16px 18px!important;row-gap:10px!important;box-sizing:border-box!important}
  .tcflick-global-header .tcflick-nav-links a{min-height:42px!important;box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
 }
+
+/* Final layout: expanded menu participates in normal document flow. */
+@media (hover:hover) and (pointer:fine){
+ .tcflick-global-header.hover-open,.tcflick-global-header:hover,.tcflick-global-header:focus-within{
+   height:auto!important;min-height:76px!important;
+ }
+ .tcflick-global-header.hover-open .tcflick-nav-wrap,.tcflick-global-header:hover .tcflick-nav-wrap,.tcflick-global-header:focus-within .tcflick-nav-wrap{
+   height:auto!important;min-height:76px!important;display:grid!important;
+   grid-template-columns:minmax(0,1fr) auto!important;
+   grid-template-rows:76px auto!important;
+   align-items:center!important;
+ }
+ .tcflick-global-logo{grid-column:1!important;grid-row:1!important}
+ .tcflick-nav-actions{grid-column:2!important;grid-row:1!important}
+ .tcflick-global-header.hover-open .tcflick-nav-links,.tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{
+   position:static!important;grid-column:1/-1!important;grid-row:2!important;
+   width:100%!important;height:auto!important;min-height:0!important;
+   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   padding:8px 0 16px!important;margin:0!important;
+   gap:10px 6px!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;
+ }
+ .tcflick-global-header .tcflick-nav-links a{white-space:normal!important;min-height:46px!important}
+}
