@@ -86,3 +86,10 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
  .tcflick-nav-links a.active:after{display:none!important}
  .tcflick-global-header .tcflick-menu-btn{display:none!important}
 }
+
+/* Expand by the actual wrapped navigation height, not a fixed 70px. */
+@media (hover:hover) and (pointer:fine){
+ .tcflick-global-header.hover-open,.tcflick-global-header:hover,.tcflick-global-header:focus-within{height:var(--tcflick-expanded-height,146px)!important;min-height:var(--tcflick-expanded-height,146px)!important}
+ .tcflick-global-header .tcflick-nav-links{height:auto!important;min-height:0!important;align-content:center!important;padding:12px 16px 18px!important;row-gap:10px!important;box-sizing:border-box!important}
+ .tcflick-global-header .tcflick-nav-links a{min-height:42px!important;box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+}
