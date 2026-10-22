@@ -53,3 +53,18 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
 /* 작은 화면과 확대 화면에서 메뉴를 읽고 키보드로 선택할 수 있습니다. */
 .tcflick-nav-actions{flex-shrink:0}.tcflick-nav-links a:focus-visible,.tcflick-nav-actions button:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
 @media(max-width:1050px){.tcflick-global-header.mobile-open{height:auto!important;min-height:330px}.tcflick-nav-wrap{height:auto!important;padding-bottom:12px}.tcflick-nav-links a{white-space:normal}.tcflick-global-logo{align-self:center}}
+
+/* 2026-10-22: 메뉴를 헤더 위에 펼치지 않고 독립적인 드롭다운으로 표시 */
+.tcflick-global-header:before{display:none!important}
+.tcflick-nav-links,.tcflick-nav-actions,.tcflick-global-logo{-webkit-user-select:none;user-select:none}
+@media(max-width:1050px){
+ .tcflick-global-header,.tcflick-global-header.mobile-open{height:76px!important;min-height:76px!important;overflow:visible!important}
+ .tcflick-nav-wrap{height:76px!important;min-height:76px!important;padding-bottom:0!important;grid-template-rows:76px!important}
+ .tcflick-global-header.mobile-open .tcflick-nav-links{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:30;padding:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;border:1px solid #d9e2ef;border-radius:16px;background:#fff;box-shadow:0 20px 45px rgba(15,23,42,.18)}
+ html.dark .tcflick-global-header.mobile-open .tcflick-nav-links{background:#111827;border-color:#273449}
+ .tcflick-nav-links a,.tcflick-nav-links a.active{display:flex;align-items:center;min-height:46px;padding:12px 15px;border:1px solid transparent;border-radius:10px;background:transparent;transition:background .16s,border-color .16s,color .16s}
+ .tcflick-nav-links a:hover,.tcflick-nav-links a:focus-visible{background:#eff6ff;border-color:#dbeafe;color:#1d4ed8!important}
+ .tcflick-nav-links a.active{background:#eff6ff;color:#2563eb!important}
+ html.dark .tcflick-nav-links a,html.dark .tcflick-nav-links a.active{background:transparent;border-color:transparent}
+ html.dark .tcflick-nav-links a:hover,html.dark .tcflick-nav-links a:focus-visible,html.dark .tcflick-nav-links a.active{background:#1b2940;border-color:#334765;color:#93c5fd!important}
+}
