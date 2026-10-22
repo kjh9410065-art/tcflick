@@ -88,3 +88,16 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
  .tcflick-nav-links a.active:after{display:none}
  .tcflick-global-header:after{content:"";position:absolute;top:100%;left:0;right:0;height:10px}
 }
+
+/* Final desktop hover behavior: dropdown occupies header height and pushes the page. */
+.tcflick-nav-links a.active:after{display:none!important}
+@media (hover:hover) and (pointer:fine) and (min-width:1051px){
+ .tcflick-global-header{height:76px!important;min-height:76px!important;overflow:visible!important;transition:height .22s ease,box-shadow .22s ease!important}
+ .tcflick-nav-wrap{height:76px!important;min-height:76px!important;overflow:visible!important}
+ .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:146px!important;box-shadow:0 8px 22px rgba(15,23,42,.08)!important}
+ .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{top:76px!important;left:0!important;right:0!important;min-height:70px!important;margin:0!important;padding:9px 12px!important;border:0!important;border-radius:0!important;box-shadow:none!important;align-items:center!important;background:transparent!important;gap:8px!important}
+ .tcflick-global-header:after{display:none!important}
+ .tcflick-nav-links a.active{background:transparent!important}
+ .tcflick-nav-links a.active:hover{background:#eff6ff!important}
+ html.dark .tcflick-nav-links a.active:hover{background:#1b2940!important}
+}
