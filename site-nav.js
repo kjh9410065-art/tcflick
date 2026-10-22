@@ -30,10 +30,10 @@
   // 메뉴는 헤더 안에 배치되어 이동 중에도 닫히지 않습니다.
   const hoverCapable=()=>window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   header.addEventListener('pointerenter',event=>{
-    if(event.pointerType==='mouse'&&hoverCapable()) header.classList.add('hover-open');
+    if(event.pointerType==='mouse'&&hoverCapable()){header.classList.add('hover-open');if(window.matchMedia('(max-width:1050px)').matches)setOpen(true);}
   });
   header.addEventListener('pointerleave',event=>{
-    if(event.pointerType==='mouse') header.classList.remove('hover-open');
+    if(event.pointerType==='mouse'){header.classList.remove('hover-open');if(window.matchMedia('(max-width:1050px)').matches)setOpen(false);}
   });
 
   const theme=document.getElementById('tcflickTheme');
