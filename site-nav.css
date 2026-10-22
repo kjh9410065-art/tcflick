@@ -62,8 +62,8 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
  .tcflick-global-header{height:76px!important;min-height:76px!important;overflow:visible!important;transition:height .2s ease!important}
  .tcflick-nav-wrap{height:76px!important;min-height:76px!important}
  .tcflick-nav-links{display:flex!important;position:absolute;top:76px;left:0;right:0;height:70px;align-items:center;justify-content:center;gap:8px;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .16s ease,visibility .16s ease}
- .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:146px!important;box-shadow:0 12px 25px rgba(15,23,42,.09)!important}
- .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{visibility:visible;opacity:1;pointer-events:auto}
+ .tcflick-global-header:hover,.tcflick-global-header.hover-open,.tcflick-global-header:focus-within{height:146px!important;box-shadow:0 12px 25px rgba(15,23,42,.09)!important}
+ .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header.hover-open .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{visibility:visible;opacity:1;pointer-events:auto}
  .tcflick-nav-links a{padding:12px 15px;border-radius:10px;transition:background .16s ease,color .16s ease}
  .tcflick-nav-links a:hover{background:#eff6ff;color:#1d4ed8!important}
  html.dark .tcflick-nav-links a:hover{background:#1b2940;color:#93c5fd!important}
