@@ -26,11 +26,21 @@
   const menu=document.getElementById('tcflickMenu');
   if(menu) menu.addEventListener('click',event=>{event.stopPropagation();const open=!header.classList.contains('mobile-open');setOpen(open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');menu.textContent=open?'×':'☰';});
 
+  const updateExpandedHeight=()=>{
+    const nav=header.querySelector('.tcflick-nav-links');
+    if(!nav)return;
+    // Measure every wrapped row, including padding, so content shifts the same distance.
+    const height=Math.ceil(nav.getBoundingClientRect().height || nav.scrollHeight);
+    header.style.setProperty('--tcflick-expanded-height',(76+Math.max(70,height))+'px');
+  };
+  updateExpandedHeight();
+  window.addEventListener('resize',updateExpandedHeight);
+  if(document.fonts?.ready)document.fonts.ready.then(updateExpandedHeight);
   // 마우스가 상단 헤더에 들어오면 클릭 없이 메뉴를 펼칩니다.
   // 메뉴는 헤더 안에 배치되어 이동 중에도 닫히지 않습니다.
   const hoverCapable=()=>window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   header.addEventListener('pointerenter',event=>{
-    if(event.pointerType==='mouse'&&hoverCapable()){header.classList.add('hover-open');if(window.matchMedia('(max-width:1050px)').matches)setOpen(true);}
+    if(event.pointerType==='mouse'&&hoverCapable()){header.classList.add('hover-open');updateExpandedHeight();if(window.matchMedia('(max-width:1050px)').matches)setOpen(true);}
   });
   header.addEventListener('pointerleave',event=>{
     if(event.pointerType==='mouse'){header.classList.remove('hover-open');if(window.matchMedia('(max-width:1050px)').matches)setOpen(false);}
