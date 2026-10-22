@@ -75,3 +75,16 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
  html.dark .tcflick-global-header:hover .tcflick-nav-links,html.dark .tcflick-global-header:focus-within .tcflick-nav-links{background:#111827;border-color:#273449}
  .tcflick-global-header:after{content:"";position:absolute;left:0;right:0;top:100%;height:10px;pointer-events:auto}
 }
+
+/* Desktop: header remains compact; hovering reveals navigation below it. */
+@media (hover:hover) and (pointer:fine) and (min-width:1051px){
+ .tcflick-global-header,.tcflick-nav-wrap{height:76px!important;min-height:76px!important;overflow:visible!important}
+ .tcflick-global-header .tcflick-nav-links{display:none!important}
+ .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{display:flex!important;position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:40;justify-content:center;flex-wrap:wrap;gap:10px;padding:14px 18px;border:1px solid #d9e2ef;border-radius:16px;background:#fff;box-shadow:0 18px 45px rgba(15,23,42,.15)}
+ html.dark .tcflick-global-header:hover .tcflick-nav-links,html.dark .tcflick-global-header:focus-within .tcflick-nav-links{background:#111827;border-color:#273449}
+ .tcflick-nav-links a{padding:12px 16px!important;border-radius:10px;transition:background .18s,color .18s}
+ .tcflick-nav-links a:hover{background:#eff6ff;color:#1d4ed8!important}
+ html.dark .tcflick-nav-links a:hover{background:#1b2940;color:#93c5fd!important}
+ .tcflick-nav-links a.active:after{display:none}
+ .tcflick-global-header:after{content:"";position:absolute;top:100%;left:0;right:0;height:10px}
+}
