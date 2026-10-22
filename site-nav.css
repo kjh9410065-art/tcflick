@@ -54,50 +54,24 @@ html.dark body.tcflick-home .tcflick-page-link{background:#111827;border-color:#
 .tcflick-nav-actions{flex-shrink:0}.tcflick-nav-links a:focus-visible,.tcflick-nav-actions button:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
 @media(max-width:1050px){.tcflick-global-header.mobile-open{height:auto!important;min-height:330px}.tcflick-nav-wrap{height:auto!important;padding-bottom:12px}.tcflick-nav-links a{white-space:normal}.tcflick-global-logo{align-self:center}}
 
-/* 2026-10-22: 메뉴를 헤더 위에 펼치지 않고 독립적인 드롭다운으로 표시 */
+
+/* Unified hover navigation — no floating dropdown or hover gap. */
 .tcflick-global-header:before{display:none!important}
-.tcflick-nav-links,.tcflick-nav-actions,.tcflick-global-logo{-webkit-user-select:none;user-select:none}
-@media(max-width:1050px){
- .tcflick-global-header,.tcflick-global-header.mobile-open{height:76px!important;min-height:76px!important;overflow:visible!important}
- .tcflick-nav-wrap{height:76px!important;min-height:76px!important;padding-bottom:0!important;grid-template-rows:76px!important}
- .tcflick-global-header.mobile-open .tcflick-nav-links{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:30;padding:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;border:1px solid #d9e2ef;border-radius:16px;background:#fff;box-shadow:0 20px 45px rgba(15,23,42,.18)}
- html.dark .tcflick-global-header.mobile-open .tcflick-nav-links{background:#111827;border-color:#273449}
- .tcflick-nav-links a,.tcflick-nav-links a.active{display:flex;align-items:center;min-height:46px;padding:12px 15px;border:1px solid transparent;border-radius:10px;background:transparent;transition:background .16s,border-color .16s,color .16s}
- .tcflick-nav-links a:hover,.tcflick-nav-links a:focus-visible{background:#eff6ff;border-color:#dbeafe;color:#1d4ed8!important}
- .tcflick-nav-links a.active{background:#eff6ff;color:#2563eb!important}
- html.dark .tcflick-nav-links a,html.dark .tcflick-nav-links a.active{background:transparent;border-color:transparent}
- html.dark .tcflick-nav-links a:hover,html.dark .tcflick-nav-links a:focus-visible,html.dark .tcflick-nav-links a.active{background:#1b2940;border-color:#334765;color:#93c5fd!important}
-}
-
-/* Desktop and tablet pointer users: reveal menu on hover, keep touch click support. */
-@media (hover:hover) and (pointer:fine) and (max-width:1050px){
- .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:30;padding:12px;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;border:1px solid #d9e2ef;border-radius:16px;background:#fff;box-shadow:0 20px 45px rgba(15,23,42,.18)}
- html.dark .tcflick-global-header:hover .tcflick-nav-links,html.dark .tcflick-global-header:focus-within .tcflick-nav-links{background:#111827;border-color:#273449}
- .tcflick-global-header:after{content:"";position:absolute;left:0;right:0;top:100%;height:10px;pointer-events:auto}
-}
-
-/* Desktop: header remains compact; hovering reveals navigation below it. */
-@media (hover:hover) and (pointer:fine) and (min-width:1051px){
- .tcflick-global-header,.tcflick-nav-wrap{height:76px!important;min-height:76px!important;overflow:visible!important}
- .tcflick-global-header .tcflick-nav-links{display:none!important}
- .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{display:flex!important;position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:40;justify-content:center;flex-wrap:wrap;gap:10px;padding:14px 18px;border:1px solid #d9e2ef;border-radius:16px;background:#fff;box-shadow:0 18px 45px rgba(15,23,42,.15)}
- html.dark .tcflick-global-header:hover .tcflick-nav-links,html.dark .tcflick-global-header:focus-within .tcflick-nav-links{background:#111827;border-color:#273449}
- .tcflick-nav-links a{padding:12px 16px!important;border-radius:10px;transition:background .18s,color .18s}
- .tcflick-nav-links a:hover{background:#eff6ff;color:#1d4ed8!important}
- html.dark .tcflick-nav-links a:hover{background:#1b2940;color:#93c5fd!important}
- .tcflick-nav-links a.active:after{display:none}
- .tcflick-global-header:after{content:"";position:absolute;top:100%;left:0;right:0;height:10px}
-}
-
-/* Final desktop hover behavior: dropdown occupies header height and pushes the page. */
 .tcflick-nav-links a.active:after{display:none!important}
 @media (hover:hover) and (pointer:fine) and (min-width:1051px){
- .tcflick-global-header{height:76px!important;min-height:76px!important;overflow:visible!important;transition:height .22s ease,box-shadow .22s ease!important}
- .tcflick-nav-wrap{height:76px!important;min-height:76px!important;overflow:visible!important}
- .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:146px!important;box-shadow:0 8px 22px rgba(15,23,42,.08)!important}
- .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{top:76px!important;left:0!important;right:0!important;min-height:70px!important;margin:0!important;padding:9px 12px!important;border:0!important;border-radius:0!important;box-shadow:none!important;align-items:center!important;background:transparent!important;gap:8px!important}
- .tcflick-global-header:after{display:none!important}
- .tcflick-nav-links a.active{background:transparent!important}
- .tcflick-nav-links a.active:hover{background:#eff6ff!important}
- html.dark .tcflick-nav-links a.active:hover{background:#1b2940!important}
+ .tcflick-global-header{height:76px!important;min-height:76px!important;overflow:visible!important;transition:height .2s ease!important}
+ .tcflick-nav-wrap{height:76px!important;min-height:76px!important}
+ .tcflick-nav-links{display:flex!important;position:absolute;top:76px;left:0;right:0;height:70px;align-items:center;justify-content:center;gap:8px;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .16s ease,visibility .16s ease}
+ .tcflick-global-header:hover,.tcflick-global-header:focus-within{height:146px!important;box-shadow:0 12px 25px rgba(15,23,42,.09)!important}
+ .tcflick-global-header:hover .tcflick-nav-links,.tcflick-global-header:focus-within .tcflick-nav-links{visibility:visible;opacity:1;pointer-events:auto}
+ .tcflick-nav-links a{padding:12px 15px;border-radius:10px;transition:background .16s ease,color .16s ease}
+ .tcflick-nav-links a:hover{background:#eff6ff;color:#1d4ed8!important}
+ html.dark .tcflick-nav-links a:hover{background:#1b2940;color:#93c5fd!important}
+}
+@media(max-width:1050px){
+ .tcflick-global-header{height:76px!important;min-height:76px!important;overflow:visible!important}
+ .tcflick-nav-wrap{height:76px!important;min-height:76px!important;padding-bottom:0!important;grid-template-rows:76px!important}
+ .tcflick-global-header.mobile-open{height:330px!important;min-height:330px!important}
+ .tcflick-global-header.mobile-open .tcflick-nav-links{display:grid!important;position:static;grid-column:1/-1;grid-row:2;align-self:start;padding:8px 0;gap:6px;background:transparent;border:0;box-shadow:none}
+ .tcflick-nav-links a.active:after{display:none!important}
 }
