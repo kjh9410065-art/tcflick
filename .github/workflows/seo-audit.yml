@@ -18,6 +18,22 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure NERDING links use the official domain
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          official = 'https://nerding.tcflick.com/'
+          legacy = ('mova.tcflick.com', 'mova.carpick.workers.dev')
+          for filename in Path('.').glob('*.html'):
+            text = filename.read_text(encoding='utf-8')
+            if any(host in text for host in legacy):
+              raise SystemExit(f'Retired NERDING hostname found in {filename}')
+          for filename in ('index.html', 'services.html', 'guide.html', 'insights.html'):
+            html = Path(filename).read_text(encoding='utf-8')
+            if f'href="{official}"' not in html:
+              raise SystemExit(f'Official NERDING link missing: {filename}')
+          print('All public TCFLiCK NERDING links use ' + official)
+          PY
       - name: Wait for site deployment after push
         if: github.event_name == 'push'
         run: sleep 90
