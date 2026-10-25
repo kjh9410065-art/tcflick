@@ -8,7 +8,7 @@ on:
       - 'sitemap.xml'
       - '.github/workflows/seo-audit.yml'
   schedule:
-    - cron: '17 0 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -111,6 +111,40 @@ jobs:
               report['problems'].append(f'{page_url}: canonical link missing or mismatched')
             if '<title>' not in html or '티씨플릭' not in html.split('</head>')[0]:
               report['problems'].append(f'{page_url}: Korean brand metadata missing')
+          # Googlebot is tested on every sitemap URL, not only on the homepage.
+          report['googlebot_pages'] = []
+          for page_url in sitemap_links:
+            req = urllib.request.Request(page_url, headers={'User-Agent': agents['googlebot']})
+            try:
+              with urllib.request.urlopen(req, timeout=18) as response:
+                body = response.read(600000).decode('utf-8', errors='replace')
+                result = {'url': page_url, 'status': response.status, 'final_url': response.url}
+            except urllib.error.HTTPError as error:
+              result = {'url': page_url, 'status': error.code, 'error': str(error)}
+              body = ''
+            except Exception as error:
+              result = {'url': page_url, 'status': 0, 'error': str(error)}
+              body = ''
+            report['googlebot_pages'].append(result)
+            if result['status'] != 200:
+              report['problems'].append(f'{page_url} (googlebot): HTTP {result["status"]}')
+            elif result.get('final_url') != page_url:
+              report['problems'].append(f'{page_url} (googlebot): redirected to {result.get("final_url")}')
+            elif f'href="{page_url}"' not in body:
+              report['problems'].append(f'{page_url} (googlebot): canonical link missing')
+          # An unknown page must return a real HTTP 404 (not a soft 404 / HTTP 200).
+          missing = base + '/__tcflick_audit_nonexistent_404_check_2026'
+          req = urllib.request.Request(missing, headers={'User-Agent': agents['googlebot']})
+          try:
+            with urllib.request.urlopen(req, timeout=18) as response:
+              result = {'url': missing, 'status': response.status, 'final_url': response.url}
+          except urllib.error.HTTPError as error:
+            result = {'url': missing, 'status': error.code}
+          except Exception as error:
+            result = {'url': missing, 'status': 0, 'error': str(error)}
+          report['not_found_check'] = result
+          if result['status'] != 404:
+            report['problems'].append(f'Unknown URL did not return 404: {result}')
           Path('seo-status.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print(json.dumps(report, ensure_ascii=False, indent=2))
           PY
@@ -122,3 +156,16 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'chore(seo): save public crawl status' && git push
           fi
+
+      - name: Enforce successful crawl after recording diagnostic report
+        run: |
+          python3 - <<'PY'
+          import json
+          with open('seo-status.json', encoding='utf-8') as file:
+            report = json.load(file)
+          if report.get('problems'):
+            for problem in report['problems']:
+              print('::error::' + problem)
+            raise SystemExit(f"Public crawl failed: {len(report['problems'])} issue(s)")
+          print('TCFLiCK: all sitemap pages + Googlebot + 404 status passed')
+          PY
