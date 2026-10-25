@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-25T05:14:46.470953+00:00",
+  "checked_at_utc": "2026-10-25T22:15:17.669553+00:00",
   "checks": [
     {
       "path": "/",
@@ -151,5 +151,91 @@
       "final_url": "https://tcflick.com/faq",
       "x_robots_tag": ""
     }
-  ]
+  ],
+  "googlebot_pages": [
+    {
+      "url": "https://tcflick.com/",
+      "status": 200,
+      "final_url": "https://tcflick.com/"
+    },
+    {
+      "url": "https://tcflick.com/about",
+      "status": 200,
+      "final_url": "https://tcflick.com/about"
+    },
+    {
+      "url": "https://tcflick.com/services",
+      "status": 200,
+      "final_url": "https://tcflick.com/services"
+    },
+    {
+      "url": "https://tcflick.com/contact",
+      "status": 200,
+      "final_url": "https://tcflick.com/contact"
+    },
+    {
+      "url": "https://tcflick.com/privacy",
+      "status": 200,
+      "final_url": "https://tcflick.com/privacy"
+    },
+    {
+      "url": "https://tcflick.com/terms",
+      "status": 200,
+      "final_url": "https://tcflick.com/terms"
+    },
+    {
+      "url": "https://tcflick.com/affiliate",
+      "status": 200,
+      "final_url": "https://tcflick.com/affiliate"
+    },
+    {
+      "url": "https://tcflick.com/notice",
+      "status": 200,
+      "final_url": "https://tcflick.com/notice"
+    },
+    {
+      "url": "https://tcflick.com/guide",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide"
+    },
+    {
+      "url": "https://tcflick.com/insights",
+      "status": 200,
+      "final_url": "https://tcflick.com/insights"
+    },
+    {
+      "url": "https://tcflick.com/guide-mingka",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide-mingka"
+    },
+    {
+      "url": "https://tcflick.com/guide-noviq",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide-noviq"
+    },
+    {
+      "url": "https://tcflick.com/guide-nerding",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide-nerding"
+    },
+    {
+      "url": "https://tcflick.com/guide-movoka",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide-movoka"
+    },
+    {
+      "url": "https://tcflick.com/guide-munseodam",
+      "status": 200,
+      "final_url": "https://tcflick.com/guide-munseodam"
+    },
+    {
+      "url": "https://tcflick.com/faq",
+      "status": 200,
+      "final_url": "https://tcflick.com/faq"
+    }
+  ],
+  "not_found_check": {
+    "url": "https://tcflick.com/__tcflick_audit_nonexistent_404_check_2026",
+    "status": 404
+  }
 }
