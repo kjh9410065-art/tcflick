@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T04:57:31.947885+00:00",
+  "checked_at_utc": "2026-10-26T11:40:29.081104+00:00",
   "checks": [
     {
       "path": "/",
@@ -40,7 +40,7 @@
       "url": "https://tcflick.com/sitemap.xml",
       "content_type": "application/xml",
       "x_robots_tag": "",
-      "url_count": 16
+      "url_count": 17
     },
     {
       "path": "/sitemap.xml",
@@ -49,10 +49,13 @@
       "url": "https://tcflick.com/sitemap.xml",
       "content_type": "application/xml",
       "x_robots_tag": "",
-      "url_count": 16
+      "url_count": 17
     }
   ],
-  "problems": [],
+  "problems": [
+    "/sitemap.xml (browser): sitemap URL mismatch",
+    "/sitemap.xml (googlebot): sitemap URL mismatch"
+  ],
   "note": "Google index status requires Search Console authentication.",
   "pages": [
     {
@@ -150,6 +153,12 @@
       "status": 200,
       "final_url": "https://tcflick.com/faq",
       "x_robots_tag": ""
+    },
+    {
+      "url": "https://tcflick.com/service-finder",
+      "status": 200,
+      "final_url": "https://tcflick.com/service-finder",
+      "x_robots_tag": ""
     }
   ],
   "googlebot_pages": [
@@ -232,6 +241,11 @@
       "url": "https://tcflick.com/faq",
       "status": 200,
       "final_url": "https://tcflick.com/faq"
+    },
+    {
+      "url": "https://tcflick.com/service-finder",
+      "status": 200,
+      "final_url": "https://tcflick.com/service-finder"
     }
   ],
   "not_found_check": {
