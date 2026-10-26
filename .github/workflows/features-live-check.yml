@@ -1,0 +1,35 @@
+name: TCFLiCK new features live smoke test
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/features-live-check.yml'
+      - 'notice.html'
+      - 'service-finder.html'
+      - 'index.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify all five new feature URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          check() {
+            local url="$1" needle="$2" name="$3"
+            echo "Checking $name: $url"
+            local output="/tmp/tcflick-${name}.html"
+            curl --fail --silent --show-error --location --retry 5 --retry-delay 6 --connect-timeout 12 --max-time 60 "$url" -o "$output"
+            grep -Fq "$needle" "$output" || { echo "::error::Expected marker missing for $name"; exit 1; }
+            echo "OK $name - $(wc -c < "$output") bytes"
+          }
+          check "https://mingka.tcflick.com/vehicle-budget.html" "월 예산" "mingka"
+          check "https://noviq.tcflick.com/scenario-lab.html" "예상 계산 결과" "noviq"
+          check "https://nerding.tcflick.com/ai-workflow.html" "AI WORKFLOW BUILDER" "nerding"
+          check "https://munsudam.tcflick.com/workspace.html" "고급 문서 작업실" "munsudam"
+          check "https://tcflick.com/service-finder" "통합 서비스 검색" "tcflick"
+          echo "All five live feature endpoints confirmed."
