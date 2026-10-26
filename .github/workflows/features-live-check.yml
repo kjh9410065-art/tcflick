@@ -32,4 +32,6 @@ jobs:
           check "https://nerding.tcflick.com/ai-workflow.html" "AI WORKFLOW BUILDER" "nerding"
           check "https://munsudam.tcflick.com/workspace.html" "고급 문서 작업실" "munsudam"
           check "https://tcflick.com/service-finder" "통합 서비스 검색" "tcflick"
-          echo "All five live feature endpoints confirmed."
+          check "https://tcflick.com/notice" "5개 서비스의 새 기능을 공개했습니다." "notice"
+          check "https://tcflick.com/" "2026.10.26" "homepage-announcement"
+          echo "All five live feature endpoints and announcement pages confirmed."
