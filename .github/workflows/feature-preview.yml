@@ -1,0 +1,26 @@
+name: TCFLiCK isolated preview
+on:
+  push:
+    branches: ['preview/all-features-20261026']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate unified preview
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('feature-preview.html').read_text()
+          for item in ['id="q"','id="list"','id="quick"','id="health"','id="favOnly"','https://nerding.tcflick.com/','noindex,nofollow','@media(max-width:520px)']:
+              assert item in s,item
+          print('TCFLiCK preview source checks passed')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tcflick-feature-preview
+          path: feature-preview.html
+          retention-days: 14
