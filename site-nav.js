@@ -2,7 +2,7 @@
 (function(){
   const items=[
     ['⌂ 홈','/','home'],['서비스','/services','services'],['티씨플릭 소개','/about','about'],['이용 안내','/guide','guide'],
-    ['인사이트','/insights','insights'],['FAQ','/faq','faq'],['공지사항','/notice','notice'],['문의','/contact','contact']
+    ['인사이트','/insights','insights'],['FAQ','/faq','faq'],['서비스 검색','/service-finder','finder'],['공지사항','/notice','notice'],['문의','/contact','contact']
   ];
   const path=(location.pathname==='/index.html'?'/':location.pathname).replace(/\/$/,'')||'/';
   const current=path==='/'?'home':(items.find(item=>item[1]===path)||[])[2]||'';
