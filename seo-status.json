@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T11:40:29.081104+00:00",
+  "checked_at_utc": "2026-10-26T11:44:26.779201+00:00",
   "checks": [
     {
       "path": "/",
@@ -52,10 +52,7 @@
       "url_count": 17
     }
   ],
-  "problems": [
-    "/sitemap.xml (browser): sitemap URL mismatch",
-    "/sitemap.xml (googlebot): sitemap URL mismatch"
-  ],
+  "problems": [],
   "note": "Google index status requires Search Console authentication.",
   "pages": [
     {
