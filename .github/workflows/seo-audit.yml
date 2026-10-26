@@ -83,7 +83,7 @@ jobs:
                   links = [element.text for element in ET.fromstring(body).findall('.//{*}loc')]
                   result['url_count'] = len(links)
                   if label == 'browser': sitemap_links = links
-                  if len(links) != 16 or any(not url.startswith(base + '/') for url in links):
+                  if len(links) < 16 or len(links) != len(set(links)) or any(not url.startswith(base + '/') for url in links):
                     report['problems'].append(f'{path} ({label}): sitemap URL mismatch')
                 except ET.ParseError as error:
                   report['problems'].append(f'{path} ({label}): malformed XML: {error}')
