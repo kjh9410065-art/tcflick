@@ -7,6 +7,8 @@ on:
       - 'site-nav.js'
       - 'sitemap.xml'
       - '.github/workflows/seo-audit.yml'
+      - 'scripts/check-seo-pages.mjs'
+      - 'scripts/test-seo-pages.mjs'
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
@@ -22,6 +24,11 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+      - name: Validate 16 source pages (titles, descriptions, canonical, lang and truthful copy)
+        run: |
+          node --test scripts/test-seo-pages.mjs
+          node scripts/check-seo-pages.mjs
+
       - name: Ensure NERDING links use the official domain
         run: |
           python3 - <<'PY'
