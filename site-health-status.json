@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-27T03:53:18.812Z",
+  "checked_at_utc": "2026-10-27T12:29:11.829Z",
   "scope": "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 209,
-        "sample_elapsed_ms": 229
+        "home_elapsed_ms": 188,
+        "sample_elapsed_ms": 173
       },
       "crawl": {
         "robots_status": 200,
@@ -72,62 +72,48 @@
       "name": "밍카",
       "url": "https://mingka.tcflick.com/",
       "sample_path": "/total-cost-compare.html",
-      "status": "ok",
+      "status": "down",
       "http": {
-        "homepage": 200,
-        "googlebot": 200,
+        "homepage": 404,
+        "googlebot": 404,
         "sample": 200,
-        "home_elapsed_ms": 206,
-        "sample_elapsed_ms": 278
+        "home_elapsed_ms": 154,
+        "sample_elapsed_ms": 166
       },
       "crawl": {
         "robots_status": 200,
         "robots_blocks_all": false,
         "sitemap_status": 200,
-        "sitemap_urls": 17,
-        "canonical": "https://mingka.tcflick.com/",
+        "sitemap_urls": 18,
+        "canonical": null,
         "homepage_noindex": false,
         "google_index_status": "unverified"
       },
       "responsive": {
-        "status": "ok",
-        "viewports": [
-          {
-            "width": 320,
-            "actual_width": 320,
-            "document_width": 320,
-            "body_width": 320,
-            "horizontal_overflow": false,
-            "screenshot": ".health-artifacts/screenshots/mingka-320.png"
-          },
-          {
-            "width": 390,
-            "actual_width": 390,
-            "document_width": 390,
-            "body_width": 390,
-            "horizontal_overflow": false
-          },
-          {
-            "width": 690,
-            "actual_width": 690,
-            "document_width": 690,
-            "body_width": 690,
-            "horizontal_overflow": false,
-            "screenshot": ".health-artifacts/screenshots/mingka-690.png"
-          },
-          {
-            "width": 1280,
-            "actual_width": 1280,
-            "document_width": 1280,
-            "body_width": 1280,
-            "horizontal_overflow": false,
-            "screenshot": ".health-artifacts/screenshots/mingka-1280.png"
-          }
-        ],
-        "browser": "Chromium; same-page viewport resize",
-        "js_error_samples": []
+        "status": "not_checked",
+        "viewports": [],
+        "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://mingka.tcflick.com/\nCall log:\n  - navigating to \"https://mingka.tcflick.com/\", waiting until \"domcontentloaded\"\n"
       },
-      "issues": []
+      "issues": [
+        {
+          "level": "error",
+          "code": "homepage_unavailable",
+          "message": "홈페이지 HTTP 404",
+          "url": "https://mingka.tcflick.com/"
+        },
+        {
+          "level": "warning",
+          "code": "googlebot_unavailable",
+          "message": "Googlebot 요청 HTTP 404 — 색인 가능성 점검 필요",
+          "url": "https://mingka.tcflick.com/"
+        },
+        {
+          "level": "warning",
+          "code": "responsive_not_checked",
+          "message": "브라우저 점검 실패: page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://mingka.tcflick.com/\nCall log:\n  - navigating to \"https://mingka.tcflick.com/\", waiting until \"domcontentloaded\"\n",
+          "url": "https://mingka.tcflick.com/"
+        }
+      ]
     },
     {
       "id": "nerding",
@@ -139,8 +125,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 259,
-        "sample_elapsed_ms": 276
+        "home_elapsed_ms": 188,
+        "sample_elapsed_ms": 187
       },
       "crawl": {
         "robots_status": 200,
@@ -201,8 +187,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 334,
-        "sample_elapsed_ms": 391
+        "home_elapsed_ms": 244,
+        "sample_elapsed_ms": 316
       },
       "crawl": {
         "robots_status": 200,
@@ -263,14 +249,14 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 305,
-        "sample_elapsed_ms": 524
+        "home_elapsed_ms": 252,
+        "sample_elapsed_ms": 276
       },
       "crawl": {
         "robots_status": 200,
         "robots_blocks_all": false,
         "sitemap_status": 200,
-        "sitemap_urls": 3024,
+        "sitemap_urls": 3131,
         "canonical": "https://movoka.tcflick.com/",
         "homepage_noindex": false,
         "google_index_status": "unverified"
@@ -325,14 +311,14 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 338,
-        "sample_elapsed_ms": 399
+        "home_elapsed_ms": 306,
+        "sample_elapsed_ms": 398
       },
       "crawl": {
         "robots_status": 200,
         "robots_blocks_all": false,
         "sitemap_status": 200,
-        "sitemap_urls": 1,
+        "sitemap_urls": 4,
         "canonical": "https://munsudam.tcflick.com/",
         "homepage_noindex": false,
         "google_index_status": "unverified"
@@ -380,10 +366,10 @@
   ],
   "summary": {
     "total": 6,
-    "ok": 6,
+    "ok": 5,
     "warning": 0,
-    "down": 0,
-    "responsive_checked": 6
+    "down": 1,
+    "responsive_checked": 5
   },
-  "layout_checked_at_utc": "2026-10-27T03:53:36.240Z"
+  "layout_checked_at_utc": "2026-10-27T12:29:28.191Z"
 }
