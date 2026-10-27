@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="TCFLiCK에서 운영하는 6개 사이트의 접속·검색엔진 접근·화면 점검 결과.">
+<title>6개 사이트 운영 상태 · TCFLiCK</title>
+<style>
+:root{color-scheme:light;--ink:#111a30;--muted:#59657d;--paper:#fff;--bg:#f5f7fc;--line:#e1e6f1;--brand:#3558d8;--soft:#edf2ff;--good:#117448;--warn:#a45d09;--bad:#ba3545}
+*{box-sizing:border-box}body{margin:0;min-width:0;background:var(--bg);color:var(--ink);font:15px/1.65 system-ui,-apple-system,"Noto Sans KR",sans-serif}
+a{color:var(--brand)}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #90aeff;outline-offset:3px}
+.wrap{width:min(1200px,calc(100% - 40px));margin:0 auto}
+.top{background:#fff;border-bottom:1px solid var(--line)}.top .wrap{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{text-decoration:none;color:var(--ink);font-size:21px;font-weight:900;letter-spacing:-1px}.brand span{color:var(--brand)}
+.return{font-size:13px;text-decoration:none;font-weight:800}
+main{padding:36px 0 64px}
+.kicker{margin:0;color:var(--brand);font-weight:900;font-size:12px;letter-spacing:.1em}
+h1{font-size:clamp(27px,4.2vw,44px);letter-spacing:-.045em;line-height:1.2;margin:10px 0 12px}
+.lead{margin:0;max-width:780px;color:var(--muted)}
+.meta-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 24px}
+.updated{font-size:13px;color:var(--muted)}
+.refresh{border:1px solid var(--line);background:var(--paper);padding:10px 14px;border-radius:11px;color:var(--ink);font-weight:800;min-height:44px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:22px}
+.stat{border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:18px;min-width:0}
+.stat strong{display:block;font-size:29px;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+.section-title{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:22px 0 12px}
+.section-title h2{font-size:20px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{min-width:0;border:1px solid var(--line);border-radius:18px;background:var(--paper);padding:18px}
+.card-head{display:flex;justify-content:space-between;align-items:start;gap:8px}
+.card h3{font-size:18px;margin:0 0 3px;letter-spacing:-.025em}
+.card .link{font-size:12px;word-break:break-all}
+.chip{display:inline-block;border-radius:999px;padding:3px 10px;background:var(--soft);font-size:11px;white-space:nowrap;font-weight:900;color:var(--brand)}
+.chip.ok{color:var(--good);background:#e5f8ec}.chip.warning{color:var(--warn);background:#fff2db}
+.chip.down{color:var(--bad);background:#ffedf0}.chip.not_checked{color:var(--muted);background:#e8ebf2}
+.info{margin-top:15px;border-top:1px solid var(--line);padding-top:13px;display:grid;gap:8px}
+.metric{display:flex;align-items:start;justify-content:space-between;gap:12px;font-size:13px}
+.metric span:first-child{color:var(--muted)}
+.metric span:last-child{font-weight:750;text-align:right;min-width:0;overflow-wrap:anywhere}
+.metric .down{color:var(--bad)}.metric .warning{color:var(--warn)}.metric .ok{color:var(--good)}
+.card details{margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
+.card summary{font-size:13px;font-weight:800;cursor:pointer}
+.card ul{padding-left:17px;margin:10px 0 2px;display:grid;gap:6px;font-size:12px;color:var(--muted)}
+.note{margin-top:22px;padding:20px;border:1px solid var(--line);background:var(--paper);border-radius:16px}
+.note strong{font-size:14px}.note p{margin:7px 0 0;color:var(--muted);font-size:13px}
+.foot{margin-top:26px;display:flex;gap:16px;flex-wrap:wrap;font-size:13px}
+.empty{padding:32px;border:1px dashed #aab7d4;border-radius:16px;background:#fff;color:var(--muted)}
+footer{padding:25px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+@media(max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.wrap{width:min(100% - 28px,1200px)}main{padding:28px 0 48px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:1fr}.stat{padding:14px}.stat strong{font-size:25px}}
+@media(max-width:360px){.wrap{width:calc(100% - 20px)}.brand{font-size:19px}.top .wrap{min-height:60px}.card{padding:14px}.stat{padding:12px}.stat strong{font-size:24px}.card h3{font-size:17px}}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--ink:#eef3ff;--muted:#b1bad0;--paper:#191f2d;--bg:#0f1420;--line:#303b53;--brand:#95b0ff;--soft:#26324a;--good:#82deb1;--warn:#ffd493;--bad:#ff9bad}.top{background:var(--paper)}.chip.ok{background:#193a2d}.chip.warning{background:#433521}.chip.down{background:#4b2630}.chip.not_checked{background:#303849}.empty{background:var(--paper)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="/" class="brand">TC<span>FLiCK</span></a><a class="return" href="/">← 본사이트로 돌아가기</a></div></header>
+<main class="wrap">
+<p class="kicker">SERVICE HEALTH MONITOR</p>
+<h1>6개 사이트 운영 상태</h1>
+<p class="lead">실제 페이지 접속, Googlebot 응답, 사이트맵·크롤링 설정, 폴드 및 모바일 화면의 가로 넘침을 한곳에서 확인합니다. 이 보고서는 사이트를 자동으로 수정하지 않습니다.</p>
+<div class="meta-row"><div class="updated" id="updated" role="status" aria-live="polite">최신 점검 기록을 불러오고 있습니다.</div><button type="button" class="refresh" id="refresh">결과 새로고침</button></div>
+<div class="stats" aria-label="사이트 점검 요약">
+<div class="stat"><span>점검 사이트</span><strong id="total">–</strong><span>총 6개</span></div>
+<div class="stat"><span>점검 정상</span><strong id="ok">–</strong><span>발견된 문제 없음</span></div>
+<div class="stat"><span>확인 필요</span><strong id="warnings">–</strong><span>크롤링·화면 경고 포함</span></div>
+<div class="stat"><span>접속 장애</span><strong id="down">–</strong><span>홈페이지 HTTP 오류</span></div>
+</div>
+<div class="section-title"><h2>사이트별 검사 결과</h2><span class="updated">확인 시간: 한국 표준시</span></div>
+<section class="cards" id="cards" aria-label="6개 사이트의 상태"><div class="empty">통합 점검 결과를 불러오는 중입니다.</div></section>
+<section class="note" aria-label="점검 범위">
+<strong>검색엔진 색인 상태와 크롤링 가능 상태는 다릅니다.</strong>
+<p>이 점검은 robots.txt, 사이트맵, canonical, noindex 및 Googlebot HTTP 응답을 검사합니다. <b>Google Search Console의 실제 색인 건수·색인 제외 건수·수정 결과는 연동되지 않았으므로 확인되지 않았습니다.</b> 화면 점검은 Chrome 뷰포트를 320·390·690·1280px로 변경하여 가로 넘침을 감지한 결과이며 실제 폴드 하드웨어의 모든 특성을 검증하는 것은 아닙니다.</p>
+</section>
+<nav class="foot" aria-label="관리 링크"><a href="https://github.com/kjh9410065-art/tcflick/actions/workflows/portfolio-health.yml" target="_blank" rel="noopener noreferrer">자동 점검 실행 및 스크린샷 확인</a><a href="/site-health-status.json">진단 결과 JSON</a><a href="/services">서비스 목록</a></nav>
+</main>
+<footer><div class="wrap">© TCFLiCK · 공개 상태 진단 · 이용자의 별도 개인정보는 수집하지 않습니다.</div></footer>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const labels={ok:"정상",warning:"주의",down:"접속 장애",not_checked:"미확인"};
+const clean=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const displayStatus=status=>'<span class="chip '+(labels[status]?status:"not_checked")+'">'+clean(labels[status]||"미확인")+'</span>';
+const httpStatus=value=>Number(value)>0?"HTTP "+value:"미확인";
+const metric=(name,value,status)=>'<div class="metric"><span>'+clean(name)+'</span><span'+(status?' class="'+clean(status)+'"':'')+'>'+clean(value)+'</span></div>';
+const views=[["320","폴드 접힘"],["390","일반폰"],["690","폴드 펼침"],["1280","PC"]];
+function renderItem(site){
+ const status=site.status||"not_checked";
+ const items=site.responsive?.viewports||[];
+ const ratios=views.map(([w,name])=>{
+   const v=items.find(x=>x.width===Number(w));
+   return name+" "+(v?(v.horizontal_overflow?"넘침":"정상"):"미확인");
+ }).join(" · ");
+ const issues=site.issues||[];
+ const problems=issues.length?'<ul>'+issues.map(i=>'<li>'+clean(i.message)+'</li>').join("")+'</ul>':'<p style="margin:7px 0 0;color:var(--good);font-size:12px">현재 검사 범위에서 문제를 발견하지 않았습니다.</p>';
+ const crawl=site.crawl||{};
+ const http=site.http||{};
+ return '<article class="card"><div class="card-head"><div><h3>'+clean(site.name)+'</h3><a class="link" href="'+clean(site.url)+'" target="_blank" rel="noopener noreferrer">'+clean(site.url)+'</a></div>'+displayStatus(status)+'</div>'+
+ '<div class="info">'+metric("홈페이지",httpStatus(http.homepage),http.homepage===200?"ok":"down")+
+ metric("Googlebot",httpStatus(http.googlebot),http.googlebot===200?"ok":"warning")+
+ metric("사이트맵",crawl.sitemap_urls>0?Number(crawl.sitemap_urls).toLocaleString("ko-KR")+"개 URL":"미확인",crawl.sitemap_urls>0?"ok":"warning")+
+ metric("모바일·폴드·PC",labels[site.responsive?.status]||"미확인",site.responsive?.status==="ok"?"ok":site.responsive?.status==="warning"?"warning":"")+
+ metric("구글 실제 색인", "Search Console 미연동","")+
+ '</div><details><summary>상세 확인 ('+issues.length+'건 경고·오류)</summary>'+
+ '<div class="updated" style="margin-top:8px">'+clean(ratios)+'</div>'+problems+'</details></article>';
+}
+async function reload(){
+ $("refresh").disabled=true;
+ $("updated").textContent="최근 상태 보고서를 불러오는 중…";
+ try{
+  const url="/site-health-status.json?now="+Date.now();
+  const r=await fetch(url,{cache:"no-store"});
+  if(!r.ok)throw Error("HTTP "+r.status);
+  const data=await r.json();
+  if(!Array.isArray(data.sites)||data.sites.length!==6||!data.checked_at_utc)throw Error("점검 미완료");
+  const dt=new Date(data.checked_at_utc);
+  const age=Date.now()-dt.getTime();
+  $("updated").textContent="마지막 점검: "+dt.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",dateStyle:"medium",timeStyle:"short"})+
+    (age>8*3600000?" · ⚠ 8시간 이상 지난 결과입니다.":"");
+  $("total").textContent=data.summary?.total??data.sites.length;
+  $("ok").textContent=data.summary?.ok??"–";
+  $("warnings").textContent=data.summary?.warning??"–";
+  $("down").textContent=data.summary?.down??"–";
+  $("cards").innerHTML=data.sites.map(renderItem).join("");
+ }catch(error){
+  $("updated").textContent="현재 보고서를 읽을 수 없습니다: "+String(error.message||error);
+  $("cards").innerHTML='<div class="empty">첫 점검 결과가 아직 게시되지 않았거나 일시적으로 불러올 수 없습니다. GitHub Actions 실행 기록을 확인해 주세요.</div>';
+ }finally{$("refresh").disabled=false;}
+}
+$("refresh").addEventListener("click",reload);
+reload();
+})();
+</script>
+</body></html>
