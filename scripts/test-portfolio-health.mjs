@@ -50,3 +50,14 @@ test("status precedence: errors, warnings, ok",()=>{
   assert.equal(statusFromIssues([{level:"warning"}]),"warning");
   assert.equal(statusFromIssues([{level:"warning"},{level:"error"}]),"down");
 });
+
+test("independent status page cannot be indexed and clearly marks GSC index as unverified", async () => {
+  const {readFile} = await import("node:fs/promises");
+  const html = await readFile("site-health.html", "utf8");
+  assert.match(html, /noindex,nofollow/);
+  assert.match(html, /Search Console.*연동되지 않았으므로|Search Console의 실제 색인/);
+  assert.match(html, /id="cards"/);
+  for (const width of [320, 390, 690, 1280]) {
+    assert(html.includes(String(width)), "missing viewport explanation: " + width);
+  }
+});

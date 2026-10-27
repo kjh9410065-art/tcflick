@@ -16,6 +16,7 @@ on:
       - 'scripts/test-portfolio-health.mjs'
       - '.github/workflows/portfolio-health.yml'
       - 'site-health.html'
+      - 'scripts/verify-portfolio-publish.mjs'
 
 permissions:
   contents: write
@@ -88,6 +89,10 @@ jobs:
           done
           echo '::error::Monitoring report could not be pushed to main'
           exit 1
+
+      - name: Verify dashboard and latest report on public domain
+        if: github.ref_name == 'main'
+        run: node scripts/verify-portfolio-publish.mjs
 
       - name: Fail on confirmed homepage outage
         if: github.ref_name == 'main'
