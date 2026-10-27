@@ -1,13 +1,389 @@
 {
   "schema_version": 1,
-  "checked_at_utc": null,
+  "checked_at_utc": "2026-10-27T03:50:56.578Z",
+  "scope": "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
-  "disclaimer": "첫 6개 사이트 검사를 실행하기 전입니다. 실제 색인 상태는 미확인입니다.",
-  "sites": [],
+  "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
+  "sites": [
+    {
+      "id": "tcflick",
+      "name": "티씨플릭",
+      "url": "https://tcflick.com/",
+      "sample_path": "/services",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 208,
+        "sample_elapsed_ms": 204
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 16,
+        "canonical": "https://tcflick.com/",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/tcflick-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/tcflick-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/tcflick-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    },
+    {
+      "id": "mingka",
+      "name": "밍카",
+      "url": "https://mingka.tcflick.com/",
+      "sample_path": "/total-cost-compare.html",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 242,
+        "sample_elapsed_ms": 274
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 17,
+        "canonical": "https://mingka.tcflick.com/",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/mingka-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/mingka-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/mingka-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    },
+    {
+      "id": "nerding",
+      "name": "너딩",
+      "url": "https://nerding.tcflick.com/",
+      "sample_path": "/catalog",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 249,
+        "sample_elapsed_ms": 252
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 92,
+        "canonical": "https://nerding.tcflick.com",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/nerding-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/nerding-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/nerding-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    },
+    {
+      "id": "noviq",
+      "name": "노빅",
+      "url": "https://noviq.tcflick.com/",
+      "sample_path": "/loan.html",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 286,
+        "sample_elapsed_ms": 414
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 43,
+        "canonical": "https://noviq.tcflick.com/",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/noviq-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/noviq-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/noviq-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    },
+    {
+      "id": "movoka",
+      "name": "모보카",
+      "url": "https://movoka.tcflick.com/",
+      "sample_path": "/data/performances.json",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 362,
+        "sample_elapsed_ms": 434
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 3024,
+        "canonical": "https://movoka.tcflick.com/",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/movoka-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/movoka-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/movoka-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    },
+    {
+      "id": "munsudam",
+      "name": "문서담",
+      "url": "https://munsudam.tcflick.com/",
+      "sample_path": "/privacy.html",
+      "status": "ok",
+      "http": {
+        "homepage": 200,
+        "googlebot": 200,
+        "sample": 200,
+        "home_elapsed_ms": 415,
+        "sample_elapsed_ms": 444
+      },
+      "crawl": {
+        "robots_status": 200,
+        "robots_blocks_all": false,
+        "sitemap_status": 200,
+        "sitemap_urls": 1,
+        "canonical": "https://munsudam.tcflick.com/",
+        "homepage_noindex": false,
+        "google_index_status": "unverified"
+      },
+      "responsive": {
+        "status": "ok",
+        "viewports": [
+          {
+            "width": 320,
+            "actual_width": 320,
+            "document_width": 320,
+            "body_width": 320,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/munsudam-320.png"
+          },
+          {
+            "width": 390,
+            "actual_width": 390,
+            "document_width": 390,
+            "body_width": 390,
+            "horizontal_overflow": false
+          },
+          {
+            "width": 690,
+            "actual_width": 690,
+            "document_width": 690,
+            "body_width": 690,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/munsudam-690.png"
+          },
+          {
+            "width": 1280,
+            "actual_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "horizontal_overflow": false,
+            "screenshot": ".health-artifacts/screenshots/munsudam-1280.png"
+          }
+        ],
+        "browser": "Chromium; same-page viewport resize",
+        "js_error_samples": []
+      },
+      "issues": []
+    }
+  ],
   "summary": {
-    "total": 0,
-    "ok": 0,
+    "total": 6,
+    "ok": 6,
     "warning": 0,
-    "down": 0
-  }
+    "down": 0,
+    "responsive_checked": 6
+  },
+  "layout_checked_at_utc": "2026-10-27T03:51:24.452Z"
 }
