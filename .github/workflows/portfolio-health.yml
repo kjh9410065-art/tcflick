@@ -1,0 +1,102 @@
+name: TCFLiCK six-site portfolio health
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 02:23 / 08:23 / 14:23 / 20:23 KST
+    - cron: '23 */6 * * *'
+  push:
+    branches:
+      - main
+      - feature/portfolio-health-20261027
+    paths:
+      - 'scripts/audit-portfolio.mjs'
+      - 'scripts/audit-responsive.mjs'
+      - 'scripts/portfolio-sites.mjs'
+      - 'scripts/test-portfolio-health.mjs'
+      - '.github/workflows/portfolio-health.yml'
+      - 'site-health.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portfolio-health-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test monitor logic
+        run: node --test scripts/test-portfolio-health.mjs
+
+      - name: Check six sites, Googlebot, robots and sitemap
+        run: node scripts/audit-portfolio.mjs
+
+      - name: Set up headless Chrome
+        run: |
+          npm install --no-save --no-audit --no-fund --package-lock=false playwright@1.56.1
+          if ! command -v google-chrome >/dev/null 2>&1; then
+            echo '::error::Google Chrome is unavailable; browser audit cannot be validated.'
+            exit 1
+          fi
+
+      - name: Inspect Fold cover/open, bar-phone and PC layouts
+        run: node scripts/audit-responsive.mjs
+
+      - name: Archive report and screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-health-evidence
+          path: |
+            site-health-status.json
+            .health-artifacts/screenshots/
+          retention-days: 14
+          if-no-files-found: warn
+
+      - name: Publish latest monitoring report (TCFLiCK only)
+        if: github.ref_name == 'main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site-health-status.json
+          if git diff --cached --quiet; then
+            echo 'No monitoring changes'
+            exit 0
+          fi
+          git commit -m 'chore(health): update six-site public monitoring report'
+          for attempt in 1 2 3 4; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo 'Monitoring report published'
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 6
+          done
+          echo '::error::Monitoring report could not be pushed to main'
+          exit 1
+
+      - name: Fail on confirmed homepage outage
+        if: github.ref_name == 'main'
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          const report=JSON.parse(readFileSync('site-health-status.json','utf8'));
+          const failures=report.sites.filter(x=>x.status==='down');
+          for(const site of failures)console.log('::error::'+site.name+' ('+site.url+'): homepage HTTP '+site.http.homepage);
+          if(failures.length)process.exitCode=1;
+          else console.log('No confirmed homepage outages; other warnings are in the report.');
+          NODE
