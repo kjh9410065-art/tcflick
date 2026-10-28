@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-28T05:57:50.567Z",
+  "checked_at_utc": "2026-10-28T13:16:30.740Z",
   "scope": "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 177,
-        "sample_elapsed_ms": 125
+        "home_elapsed_ms": 212,
+        "sample_elapsed_ms": 177
       },
       "crawl": {
         "robots_status": 200,
@@ -77,8 +77,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 188,
-        "sample_elapsed_ms": 179
+        "home_elapsed_ms": 580,
+        "sample_elapsed_ms": 568
       },
       "crawl": {
         "robots_status": 200,
@@ -139,8 +139,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 179,
-        "sample_elapsed_ms": 182
+        "home_elapsed_ms": 422,
+        "sample_elapsed_ms": 498
       },
       "crawl": {
         "robots_status": 200,
@@ -201,8 +201,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 1107,
-        "sample_elapsed_ms": 259
+        "home_elapsed_ms": 562,
+        "sample_elapsed_ms": 677
       },
       "crawl": {
         "robots_status": 200,
@@ -263,8 +263,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 6658,
-        "sample_elapsed_ms": 19434
+        "home_elapsed_ms": 522,
+        "sample_elapsed_ms": 689
       },
       "crawl": {
         "robots_status": 200,
@@ -325,8 +325,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 1088,
-        "sample_elapsed_ms": 393
+        "home_elapsed_ms": 678,
+        "sample_elapsed_ms": 733
       },
       "crawl": {
         "robots_status": 200,
@@ -385,5 +385,5 @@
     "down": 0,
     "responsive_checked": 6
   },
-  "layout_checked_at_utc": "2026-10-28T05:58:27.917Z"
+  "layout_checked_at_utc": "2026-10-28T13:16:47.068Z"
 }
