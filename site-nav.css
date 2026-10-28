@@ -8,6 +8,8 @@ html.dark .tcflick-global-header{background:rgba(8,13,24,.92)!important;border-c
 }
 .tcflick-global-logo{font-size:23px;font-weight:950;letter-spacing:-1.2px;color:#0f172a!important;white-space:nowrap}
 .tcflick-global-logo span{color:#2563eb}
+.tcflick-global-logo .tcflick-global-korean{display:inline-block;margin-left:10px;font-size:12px;font-weight:800;letter-spacing:0;color:#64748b;vertical-align:middle}
+html.dark .tcflick-global-logo .tcflick-global-korean{color:#94a3b8}
 html.dark .tcflick-global-logo{color:#f1f5f9!important}
 .tcflick-nav-links{display:flex;align-items:center;gap:20px;font-size:13px;font-weight:850;color:#64748b}
 .tcflick-nav-links a{position:relative;padding:24px 0;color:inherit!important;text-decoration:none!important;white-space:nowrap}

@@ -10,7 +10,7 @@
   const header=document.createElement('header');
   header.className='tcflick-global-header';
   header.setAttribute('aria-label','티씨플릭 TCFLiCK 공통 메뉴');
-  header.innerHTML='<div class="tcflick-nav-wrap"><a class="tcflick-global-logo" href="/" aria-label="TCFLiCK 홈">TC<span>FLiCK</span></a><nav class="tcflick-nav-links" aria-label="주요 메뉴">'+links+'</nav><div class="tcflick-nav-actions"><button class="tcflick-menu-btn" id="tcflickMenu" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button><button class="tcflick-theme-btn" id="tcflickTheme" type="button" aria-label="다크모드 전환">☾</button></div></div>';
+  header.innerHTML='<div class="tcflick-nav-wrap"><a class="tcflick-global-logo" href="/" aria-label="TCFLiCK 티씨플릭 홈">TC<span>FLiCK</span><small class="tcflick-global-korean">티씨플릭</small></a><nav class="tcflick-nav-links" aria-label="주요 메뉴">'+links+'</nav><div class="tcflick-nav-actions"><button class="tcflick-menu-btn" id="tcflickMenu" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button><button class="tcflick-theme-btn" id="tcflickTheme" type="button" aria-label="다크모드 전환">☾</button></div></div>';
   const old=document.querySelector('body>header');
   if(old) old.replaceWith(header); else document.body.prepend(header);
 
