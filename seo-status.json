@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T05:54:08.344800+00:00",
+  "checked_at_utc": "2026-10-28T10:31:55.569231+00:00",
   "checks": [
     {
       "path": "/",
@@ -52,7 +52,10 @@
       "url_count": 16
     }
   ],
-  "problems": [],
+  "problems": [
+    "/ (browser): Korean title missing or deployment outdated",
+    "/ (googlebot): Korean title missing or deployment outdated"
+  ],
   "note": "Google index status requires Search Console authentication.",
   "pages": [
     {
