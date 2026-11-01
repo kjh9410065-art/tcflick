@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-01T17:59:42.550Z",
+  "checked_at_utc": "2026-11-01T22:13:33.773Z",
   "scope": "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 223,
-        "sample_elapsed_ms": 173
+        "home_elapsed_ms": 245,
+        "sample_elapsed_ms": 193
       },
       "crawl": {
         "robots_status": 200,
@@ -77,8 +77,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 455,
-        "sample_elapsed_ms": 422
+        "home_elapsed_ms": 262,
+        "sample_elapsed_ms": 274
       },
       "crawl": {
         "robots_status": 200,
@@ -139,8 +139,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 295,
-        "sample_elapsed_ms": 293
+        "home_elapsed_ms": 352,
+        "sample_elapsed_ms": 356
       },
       "crawl": {
         "robots_status": 200,
@@ -201,8 +201,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 351,
-        "sample_elapsed_ms": 441
+        "home_elapsed_ms": 252,
+        "sample_elapsed_ms": 360
       },
       "crawl": {
         "robots_status": 200,
@@ -263,14 +263,14 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 364,
-        "sample_elapsed_ms": 399
+        "home_elapsed_ms": 409,
+        "sample_elapsed_ms": 612
       },
       "crawl": {
         "robots_status": 200,
         "robots_blocks_all": false,
         "sitemap_status": 200,
-        "sitemap_urls": 3021,
+        "sitemap_urls": 2865,
         "canonical": "https://movoka.tcflick.com/",
         "homepage_noindex": false,
         "google_index_status": "unverified"
@@ -325,8 +325,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 458,
-        "sample_elapsed_ms": 565
+        "home_elapsed_ms": 469,
+        "sample_elapsed_ms": 612
       },
       "crawl": {
         "robots_status": 200,
@@ -385,5 +385,5 @@
     "down": 0,
     "responsive_checked": 6
   },
-  "layout_checked_at_utc": "2026-11-01T17:59:58.322Z"
+  "layout_checked_at_utc": "2026-11-01T22:13:57.009Z"
 }
