@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-05T07:03:47.485Z",
+  "checked_at_utc": "2026-11-05T20:08:32.013Z",
   "scope": "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 209,
-        "sample_elapsed_ms": 160
+        "home_elapsed_ms": 365,
+        "sample_elapsed_ms": 247
       },
       "crawl": {
         "robots_status": 200,
@@ -77,8 +77,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 189,
-        "sample_elapsed_ms": 220
+        "home_elapsed_ms": 323,
+        "sample_elapsed_ms": 342
       },
       "crawl": {
         "robots_status": 200,
@@ -139,8 +139,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 223,
-        "sample_elapsed_ms": 222
+        "home_elapsed_ms": 465,
+        "sample_elapsed_ms": 462
       },
       "crawl": {
         "robots_status": 200,
@@ -201,8 +201,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 261,
-        "sample_elapsed_ms": 329
+        "home_elapsed_ms": 565,
+        "sample_elapsed_ms": 725
       },
       "crawl": {
         "robots_status": 200,
@@ -263,8 +263,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 271,
-        "sample_elapsed_ms": 350
+        "home_elapsed_ms": 528,
+        "sample_elapsed_ms": 708
       },
       "crawl": {
         "robots_status": 200,
@@ -325,8 +325,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 314,
-        "sample_elapsed_ms": 400
+        "home_elapsed_ms": 633,
+        "sample_elapsed_ms": 826
       },
       "crawl": {
         "robots_status": 200,
@@ -385,5 +385,5 @@
     "down": 0,
     "responsive_checked": 6
   },
-  "layout_checked_at_utc": "2026-11-05T07:04:05.570Z"
+  "layout_checked_at_utc": "2026-11-05T20:08:51.519Z"
 }
