@@ -2,10 +2,11 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { SITES } from "./portfolio-sites.mjs";
 import { auditSite, extractCanonical, extractRobotsMeta, scanRobots, scanSitemap, sameCanonical, statusFromIssues } from "./audit-portfolio.mjs";
-test("portfolio lists exactly six unique official sites", () => {
-  assert.equal(SITES.length, 6);
-  assert.equal(new Set(SITES.map(x => x.id)).size, 6);
+test("portfolio lists exactly seven unique official sites", () => {
+  assert.equal(SITES.length, 7);
+  assert.equal(new Set(SITES.map(x => x.id)).size, 7);
   assert(SITES.some(x => x.url === "https://nerding.tcflick.com"));
+  assert(SITES.some(x => x.id === "flickphoto" && x.url === "https://photo.tcflick.com" && x.sample === "/guides/convert/"));
   assert(!SITES.some(x => x.url.includes("mova.tcflick.com")));
 });
 test("canonical detection respects different HTML attribute orders", () => {
