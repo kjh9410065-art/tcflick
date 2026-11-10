@@ -5,5 +5,6 @@ export const SITES = Object.freeze([
   { id: "nerding", name: "너딩", url: "https://nerding.tcflick.com", sample: "/catalog" },
   { id: "noviq", name: "노빅", url: "https://noviq.tcflick.com", sample: "/loan.html" },
   { id: "movoka", name: "모보카", url: "https://movoka.tcflick.com", sample: "/data/performances.json" },
-  { id: "munsudam", name: "문서담", url: "https://munsudam.tcflick.com", sample: "/privacy.html" }
+  { id: "munsudam", name: "문서담", url: "https://munsudam.tcflick.com", sample: "/privacy.html" },
+  { id: "flickphoto", name: "플릭포토", url: "https://photo.tcflick.com", sample: "/guides/convert/" }
 ]);
