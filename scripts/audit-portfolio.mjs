@@ -157,7 +157,7 @@ export async function main() {
   const sites = await Promise.all(SITES.map(site => auditSite(site)));
   const report = {
     schema_version: 1, checked_at_utc: now,
-    scope: "six public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
+    scope: "seven public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
     google_search_console_connected: false,
     disclaimer: "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
     sites
