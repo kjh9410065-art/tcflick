@@ -1,4 +1,4 @@
-name: TCFLiCK six-site portfolio health
+name: TCFLiCK seven-site portfolio health
 
 on:
   workflow_dispatch:
@@ -41,7 +41,7 @@ jobs:
       - name: Test monitor logic
         run: node --test scripts/test-portfolio-health.mjs
 
-      - name: Check six sites, Googlebot, robots and sitemap
+      - name: Check seven sites, Googlebot, robots and sitemap
         run: node scripts/audit-portfolio.mjs
 
       - name: Set up headless Chrome
@@ -78,7 +78,7 @@ jobs:
             echo 'No monitoring changes'
             exit 0
           fi
-          git commit -m 'chore(health): update six-site public monitoring report'
+          git commit -m 'chore(health): update seven-site public monitoring report'
           for attempt in 1 2 3 4; do
             if git pull --rebase origin main && git push origin HEAD:main; then
               echo 'Monitoring report published'
