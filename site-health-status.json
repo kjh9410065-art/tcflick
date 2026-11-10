@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-10T02:52:45.787Z",
+  "checked_at_utc": "2026-11-10T07:32:29.542Z",
   "scope": "seven public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 201,
-        "sample_elapsed_ms": 281
+        "home_elapsed_ms": 297,
+        "sample_elapsed_ms": 175
       },
       "crawl": {
         "robots_status": 200,
@@ -77,8 +77,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 189,
-        "sample_elapsed_ms": 182
+        "home_elapsed_ms": 277,
+        "sample_elapsed_ms": 267
       },
       "crawl": {
         "robots_status": 200,
@@ -139,7 +139,7 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 199,
+        "home_elapsed_ms": 236,
         "sample_elapsed_ms": 232
       },
       "crawl": {
@@ -201,8 +201,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 257,
-        "sample_elapsed_ms": 277
+        "home_elapsed_ms": 326,
+        "sample_elapsed_ms": 470
       },
       "crawl": {
         "robots_status": 200,
@@ -263,8 +263,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 256,
-        "sample_elapsed_ms": 359
+        "home_elapsed_ms": 358,
+        "sample_elapsed_ms": 538
       },
       "crawl": {
         "robots_status": 200,
@@ -325,8 +325,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 273,
-        "sample_elapsed_ms": 327
+        "home_elapsed_ms": 463,
+        "sample_elapsed_ms": 552
       },
       "crawl": {
         "robots_status": 200,
@@ -387,8 +387,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 707,
-        "sample_elapsed_ms": 450
+        "home_elapsed_ms": 521,
+        "sample_elapsed_ms": 539
       },
       "crawl": {
         "robots_status": 200,
@@ -447,5 +447,5 @@
     "down": 0,
     "responsive_checked": 7
   },
-  "layout_checked_at_utc": "2026-11-10T02:53:06.441Z"
+  "layout_checked_at_utc": "2026-11-10T07:32:56.866Z"
 }
