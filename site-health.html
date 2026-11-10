@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="TCFLiCK에서 운영하는 6개 사이트의 접속·검색엔진 접근·화면 점검 결과.">
-<title>6개 사이트 운영 상태 · TCFLiCK</title>
+<meta name="description" content="TCFLiCK에서 운영하는 사이트의 접속·검색엔진 접근·화면 점검 결과.">
+<title>사이트 운영 상태 · TCFLiCK</title>
 <style>
 :root{color-scheme:light;--ink:#111a30;--muted:#59657d;--paper:#fff;--bg:#f5f7fc;--line:#e1e6f1;--brand:#3558d8;--soft:#edf2ff;--good:#117448;--warn:#a45d09;--bad:#ba3545}
 *{box-sizing:border-box}body{margin:0;min-width:0;background:var(--bg);color:var(--ink);font:15px/1.65 system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -58,17 +58,17 @@ footer{padding:25px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
 <header class="top"><div class="wrap"><a href="/" class="brand">TC<span>FLiCK</span></a><a class="return" href="/">← 본사이트로 돌아가기</a></div></header>
 <main class="wrap">
 <p class="kicker">SERVICE HEALTH MONITOR</p>
-<h1>6개 사이트 운영 상태</h1>
+<h1>전체 사이트 운영 상태</h1>
 <p class="lead">실제 페이지 접속, Googlebot 응답, 사이트맵·크롤링 설정, 폴드 및 모바일 화면의 가로 넘침을 한곳에서 확인합니다. 이 보고서는 사이트를 자동으로 수정하지 않습니다.</p>
 <div class="meta-row"><div class="updated" id="updated" role="status" aria-live="polite">최신 점검 기록을 불러오고 있습니다.</div><button type="button" class="refresh" id="refresh">결과 새로고침</button></div>
 <div class="stats" aria-label="사이트 점검 요약">
-<div class="stat"><span>점검 사이트</span><strong id="total">–</strong><span>총 6개</span></div>
+<div class="stat"><span>점검 사이트</span><strong id="total">–</strong><span>현재 점검 결과 기준</span></div>
 <div class="stat"><span>점검 정상</span><strong id="ok">–</strong><span>발견된 문제 없음</span></div>
 <div class="stat"><span>확인 필요</span><strong id="warnings">–</strong><span>크롤링·화면 경고 포함</span></div>
 <div class="stat"><span>접속 장애</span><strong id="down">–</strong><span>홈페이지 HTTP 오류</span></div>
 </div>
 <div class="section-title"><h2>사이트별 검사 결과</h2><span class="updated">확인 시간: 한국 표준시</span></div>
-<section class="cards" id="cards" aria-label="6개 사이트의 상태"><div class="empty">통합 점검 결과를 불러오는 중입니다.</div></section>
+<section class="cards" id="cards" aria-label="사이트별 운영 상태"><div class="empty">통합 점검 결과를 불러오는 중입니다.</div></section>
 <section class="note" aria-label="점검 범위">
 <strong>검색엔진 색인 상태와 크롤링 가능 상태는 다릅니다.</strong>
 <p>이 점검은 robots.txt, 사이트맵, canonical, noindex 및 Googlebot HTTP 응답을 검사합니다. <b>Google Search Console의 실제 색인 건수·색인 제외 건수·수정 결과는 연동되지 않았으므로 확인되지 않았습니다.</b> 화면 점검은 Chrome 뷰포트를 320·390·690·1280px로 변경하여 가로 넘침을 감지한 결과이며 실제 폴드 하드웨어의 모든 특성을 검증하는 것은 아닙니다.</p>
@@ -114,7 +114,7 @@ async function reload(){
   const r=await fetch(url,{cache:"no-store"});
   if(!r.ok)throw Error("HTTP "+r.status);
   const data=await r.json();
-  if(!Array.isArray(data.sites)||data.sites.length!==6||!data.checked_at_utc)throw Error("점검 미완료");
+  if(!Array.isArray(data.sites)||data.sites.length<6||!data.checked_at_utc)throw Error("점검 미완료");
   const dt=new Date(data.checked_at_utc);
   const age=Date.now()-dt.getTime();
   $("updated").textContent="마지막 점검: "+dt.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",dateStyle:"medium",timeStyle:"short"})+
