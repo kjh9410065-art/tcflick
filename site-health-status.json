@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-12T20:10:41.784Z",
+  "checked_at_utc": "2026-11-13T06:58:48.556Z",
   "scope": "seven public TCFLiCK-owned websites; HTTP, bot crawl readiness and browser layout",
   "google_search_console_connected": false,
   "disclaimer": "Google 인덱싱/색인 제외 건수는 Google Search Console 접속 없이 확인할 수 없습니다.",
@@ -15,8 +15,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 248,
-        "sample_elapsed_ms": 180
+        "home_elapsed_ms": 192,
+        "sample_elapsed_ms": 152
       },
       "crawl": {
         "robots_status": 200,
@@ -77,8 +77,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 279,
-        "sample_elapsed_ms": 315
+        "home_elapsed_ms": 257,
+        "sample_elapsed_ms": 244
       },
       "crawl": {
         "robots_status": 200,
@@ -139,8 +139,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 387,
-        "sample_elapsed_ms": 315
+        "home_elapsed_ms": 265,
+        "sample_elapsed_ms": 277
       },
       "crawl": {
         "robots_status": 200,
@@ -201,8 +201,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 326,
-        "sample_elapsed_ms": 473
+        "home_elapsed_ms": 322,
+        "sample_elapsed_ms": 466
       },
       "crawl": {
         "robots_status": 200,
@@ -263,14 +263,14 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 295,
-        "sample_elapsed_ms": 492
+        "home_elapsed_ms": 296,
+        "sample_elapsed_ms": 369
       },
       "crawl": {
         "robots_status": 200,
         "robots_blocks_all": false,
         "sitemap_status": 200,
-        "sitemap_urls": 3149,
+        "sitemap_urls": 3201,
         "canonical": "https://movoka.tcflick.com/",
         "homepage_noindex": false,
         "google_index_status": "unverified"
@@ -325,8 +325,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 425,
-        "sample_elapsed_ms": 511
+        "home_elapsed_ms": 403,
+        "sample_elapsed_ms": 472
       },
       "crawl": {
         "robots_status": 200,
@@ -387,8 +387,8 @@
         "homepage": 200,
         "googlebot": 200,
         "sample": 200,
-        "home_elapsed_ms": 915,
-        "sample_elapsed_ms": 757
+        "home_elapsed_ms": 462,
+        "sample_elapsed_ms": 467
       },
       "crawl": {
         "robots_status": 200,
@@ -447,5 +447,5 @@
     "down": 0,
     "responsive_checked": 7
   },
-  "layout_checked_at_utc": "2026-11-12T20:11:03.544Z"
+  "layout_checked_at_utc": "2026-11-13T06:59:07.614Z"
 }
